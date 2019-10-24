@@ -210,7 +210,7 @@ vim 的编辑在 `Insert Mode`，以上的快速移动是在 `Normal Mode`。编
 
 ### 1tab == 2space
 
-``` vim
+```vim
 set expandtab
 set smarttab
 set shiftwidth=2
@@ -221,14 +221,14 @@ set tabstop=2
 
 当关闭文件并再次进入时，可以使用 `u` 进行撤销动作
 
-``` vim
+```vim
 set undofile
 set undodir=~/.vim-config/undo_dirs
 ```
 
 ### 不生成交换文件
 
-``` vim
+```vim
 " 不产生交换文件(当打开一个文件未正常关闭时会产生交换文件)
 set noswapfile
 ```

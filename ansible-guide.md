@@ -60,7 +60,7 @@ ansible 工作在 ssh 协议上，它只需要满足两个条件
 
 `~/.ssh/config` 文件如下
 
-``` config
+```config
 Host shanyue
     HostName 172.17.68.39
     User root
@@ -75,7 +75,7 @@ Host shuifeng
 
 `ansible` 默认的 `inventory` 配置文件为 `/etc/ansible/hosts`。
 
-``` ini
+```ini
 [prod]
 shanyue
 shuifeng
@@ -97,7 +97,7 @@ jumper ansible_port=5555 ansible_host=192.0.2.50
 
 所有的module可以参考 [ansible modules](https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html)
 
-``` shell
+```shell
 # 查看所有服务器是否能够正常连通
 $ ansible all -m ping
 shuifeng | SUCCESS => {
@@ -119,7 +119,7 @@ shanyue | SUCCESS => {
 + hosts，用以指定服务器分组。如 prod
 + role, 用以指定一系列命令的集合。如 tmux，方便复用
 
-``` yaml
+```yaml
 - hosts: prod
   roles:
     - tmux
@@ -131,7 +131,7 @@ role 指定了一系列命令，或者称做 `tasks`。每个 `task` 都可以�
 
 但是在 `task` 执行的过程中，一定会有一些变量，配置文件的设置，这就是 role 的其它组成部分。如 `defaults`，`vars`，`files` 和 `templates`。`role` 的文件结构组织如下
 
-``` txt
+```txt
 site.yml
 roles/
    tmux/
@@ -152,7 +152,7 @@ roles/
 
 配置文件参考我的 ansible 配置: [shfshanyue/ansible-op](https://github.com/shfshanyue/ansible-op/blob/master/roles/tmux/tasks/main.yml)
 
-``` yaml
+```yaml
 - name: prepare
   yum:
     name: "{{item}}"
@@ -220,7 +220,7 @@ roles/
 
 如 [ansible-redis](https://github.com/DavidWittman/ansible-redis)
 
-``` shell
+```shell
 # 查找关于 redis 的所有 Role
 $ ansible-galaxy search redis
 Found 387 roles matching your search:

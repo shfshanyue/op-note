@@ -30,7 +30,7 @@ date: 2019-10-02 14:00
 
 ## linux 版本和 centos 版本
 
-``` shell
+```shell
 # 查看 linux 版本
 $ uname -a
 Linux shanyue 3.10.0-957.21.3.el7.x86_64 #1 SMP Tue Jun 18 16:35:19 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
@@ -44,7 +44,7 @@ CentOS Linux release 7.6.1810 (Core)
 
 查看还有多少内存，available 指还有多少可用内存
 
-``` shell
+```shell
 # -h 指打印可视化信息
 $ free -h
               total        used        free      shared  buff/cache   available
@@ -56,14 +56,14 @@ Swap:            0B          0B          0B
 
 `load average` 指单位时间内的平均进程数
 
-``` shell
+```shell
 $ uptime
  16:48:09 up 2 days, 23:43,  2 users,  load average: 0.01, 0.21, 0.20
 ```
 
 ## IP
 
-``` shell
+```shell
 # 公网IP
 $ curl ifconfig.me
 59.110.216.155
@@ -85,7 +85,7 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 
 ## 登录用户
 
-``` shell
+```shell
 $ who -u
 who -u
 root     pts/0        Oct 18 15:04 04:25       16860 (124.200.184.74)

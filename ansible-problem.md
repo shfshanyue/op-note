@@ -15,7 +15,7 @@ title: 带着问题学习 ansible
 
 添加参数 `ignore_errors: true`
 
-``` yaml
+```yaml
 - name: install pip
   register: pip
   yum:

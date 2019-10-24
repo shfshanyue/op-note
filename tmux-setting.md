@@ -27,13 +27,18 @@ sidebarDepth: 3
 
 1. 操作简单，可配置化
 
-    你可以使用快捷键很快地在多个窗口，面板间切换。
+    你可以使用快捷键很快地在多个窗口，面板间切换，粘贴复制，无限滚屏。
 
 本章将介绍以下内容
 
 + contos/mac 上如何安装 `tmux` 
 + 使用 ansible 自动化批量安装 `tmux`
 + `tmux` 常用操作
+
+至于说它高颜值，体现在可定制化样式的状态栏下，可以设置状态栏的样式, 位置，当前window的样式，状态栏信息的丰富度。比如 [gpakosz/.tmux](https://github.com/gpakosz/.tmux) 的配置
+
+![tmux](https://cloud.githubusercontent.com/assets/553208/9890797/8dffe542-5c02-11e5-9c06-a25b452e6fcc.gif)
+
 
 <!--more-->
 
@@ -46,7 +51,7 @@ sidebarDepth: 3
 
 但是你在 centos 上，如果直接使用 `yum` 来安装软件，会安装特别旧的版本，且很多实用的功能无法使用。那么直接通过 [tmux源码](https://github.com/tmux/tmux) 自己编译安装则是一个不错的注意
 
-``` shell
+```shell
 # 安装软件依赖
 $ yum install -y gcc automake libevent-devel ncurses-devel glibc-static
 
@@ -69,7 +74,7 @@ tmux 2.8
 
 **使用源码编译安装过于琐碎且易错，又有可能需要在若干台服务器上安装 `tmux`，此时使用 `ansible` 进行自动化安装是一个不错的选择。** 关于 `ansible` 可参考本系列文章 [使用 ansible 做自动化运维](https://shanyue.tech/op/ansible-guide)。
 
-``` shell
+```shell
 $ git clone git@github.com:shfshanyue/ansible-op.git
 
 # 一次性给多服务器上安装 tmux
@@ -78,7 +83,7 @@ $ ansible-playbook -i hosts tmux.yml
 
 `tmux` 这个 ansible role 的配置在 [我的tmux配置](https://github.com/shfshanyue/ansible-op/blob/master/roles/tmux/tasks/main.yml) 上。配置文件如下
 
-``` yaml
+```yaml
 # 安装依赖软件
 - name: prepare
   yum:
@@ -141,7 +146,7 @@ $ ansible-playbook -i hosts tmux.yml
 
 ### 启动
 
-``` shell
+```shell
 # 新建一个 tmux session
 $ tmux
 ```
@@ -154,7 +159,7 @@ $ tmux
 
 ### 查看所有快捷键
 
-<img width="600" src="https://raw.githubusercontent.com/shfshanyue/op-note/master/assets/tmux-help.gif" loading="lazy">
+<img width="600" src="https://raw.githubusercontent.com/shfshanyue/op-note/master/assets/tmux-help.jpg" loading="lazy">
 
 `prefix ?`
 
@@ -164,7 +169,7 @@ $ tmux
 
 我习惯 `<Crtl-s>` 来作为前缀键，默认前缀建为 `<Ctrl-b>`。`send-prefix` 代表向终端发送前缀键，`send-prefix -2` 代表新增一个快捷键代表前缀键。
 
-``` shell
+```shell
 # 以下命令直接在 tmux 命令模式执行，或者加关键字 `tmux` 在 shell 中执行，或者写入配置文件 ~/.tmux.conf 中生效
 # `prefix :` 可以进入 tmux 命令模式
 
@@ -180,7 +185,7 @@ $ bind C-s send-prefix -2
 
 > prefix 默认为 `<Ctrl-b>`
 
-``` shell
+```shell
 $ tmux new -s shanyue
 
 # 或者使用快捷键 prefix + d
@@ -192,7 +197,7 @@ $ tmux attach -t shanyue
 
 移动面板命令为 `select-pane`，可配置为 `vim` 式的移动命令。
 
-``` shell
+```shell
 # 以下命令直接在 tmux 命令模式执行，或者加关键字 `tmux` 在 shell 中执行，或者写入配置文件 ~/.tmux.conf 中生效
 # `prefix :` 可以进入 tmux 命令模式
 
@@ -217,7 +222,7 @@ $ bind -r k select-pane -U
 
 需要配置以下两个配置把它俩给关了，终于可以重命名了
 
-``` shell
+```shell
 # 以下命令直接在 tmux 命令模式执行，或者加关键字 `tmux` 在 shell 中执行，或者写入配置文件 ~/.tmux.conf 中生效
 # `prefix :` 可以进入 tmux 命令模式
 
@@ -227,7 +232,7 @@ set -wg automatic-rename off
 
 ### 开启鼠标支持
 
-``` shell
+```shell
 $ tmux set -g mouse on
 ```
 
@@ -243,7 +248,7 @@ $ tmux set -g mouse on
 
 新开面板的命令为 `split-window`
 
-``` shell
+```shell
 # 以下命令直接在 tmux 命令模式执行，或者加关键字 `tmux` 在 shell 中执行，或者写入配置文件 ~/.tmux.conf 中生效
 # `prefix :` 可以进入 tmux 命令模式
 
@@ -267,7 +272,7 @@ bind '"' split-window -c "#{pane_current_path}"
 + `copy-mode`
 
     按 `prefix [` 键进入此模式，类似于 `vi(emacs)` 的 `normal mode`，支持复制，粘贴，查找，以及翻页。具体是 `vi` 还是 `emacs` 可以根据以下命令探知，表明查看全局窗口设置 `mode-keys`，默认会是 `vi`，如果不是，那就请设置为 `vi` 吧~
-    ```  shell
+    ``` shell
     $ tmux show-window-options -g mode-keys
     ```
     与 `vi` 命令相同，如上下翻页(半屏)可使用 `C-d` 以及 `C-u`，当然你也可以使用 `hjkl`。
@@ -289,7 +294,7 @@ bind -t vi-copy y copy-selection
 
 复制操作会把内容存进 `buffer` 里，熟悉以下几个命令能够更熟练地操作 buffer
 
-``` shell
+```shell
 $ tmux list-buffers           # 列出所有 buffer
 $ tmux show-buffer -b [name]  # 显示最近 buffer,也可指定 buffer name
 $ tmux choose-buffer　　    　# 进入选择 buffer 界面，更加灵活

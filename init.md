@@ -32,7 +32,7 @@ description: 当刚拥有服务器后，首先需要登录服务器，本节主�
 
 以下是快速登录我两个服务器 `shanyue` 和 `shuifeng` 的配置
 
-``` config
+```config
 # 修改 ssh 配置文件 ~/.ssh/config
 Host shanyue
     HostName 59.110.216.155
@@ -44,7 +44,7 @@ Host shuifeng
     User root
 ```
 
-``` shell
+```shell
 # 配置成功之后直接 ssh Host 名称就可以
 $ ssh shanyue
 The authenticity of host '59.110.216.155 (59.110.216.155)' can't be established.
@@ -76,7 +76,7 @@ Welcome to Alibaba Cloud Elastic Compute Service !
 
 此时就需要一个解决生产力的命令行工具应运而生: `ssh-copy-id`
 
-``` ssh
+```ssh
 # 在本地环境进行操作
 
 # 会提示你输入密码，成功之后可以直接 ssh 进去
@@ -88,7 +88,7 @@ $ ssh-copy-id shanyue
 
 修改云服务器的 ssh 配置文件：`/etc/ssh/ssh_config`。`PasswordAuthentication` 设置为 `no`，禁用密码登录
 
-``` config
+```config
 # 禁用密码登录
 Host *
   PasswordAuthentication no

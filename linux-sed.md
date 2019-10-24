@@ -3,6 +3,7 @@ title: sed 命令使用及示例
 keywords: sed examples,mac中的sed,sed删除文件,sed替换文件
 description: sed 是一个用来筛选与转换文本内容的工具。一般用来批量替换，删除某行文件。如果想在 mac 中使用 sed，请使用 gsed 代替，不然会被坑
 date: 2019-10-18 22:00
+sidebarDepth: 3
 
 ---
 
@@ -19,7 +20,7 @@ date: 2019-10-18 22:00
 
 每个 sed 命令，基本可以由选项，匹配与对应的操作来完成
 
-``` shell
+```shell
 # 打印文件第三行到第五行
 # -n: 选项，代表打印
 # 3-5: 匹配，代表第三行到第五行
@@ -35,9 +36,9 @@ $ sed -i '2d' file
 
 ### 选项
 
-`-n`: 打印匹配内容行
-`-i`: 直接替换文本内容
-`-f`: 指定 sed 脚本文件，包含一系列 sed 命令
++ `-n`: 打印匹配内容行
++ `-i`: 直接替换文本内容
++ `-f`: 指定 sed 脚本文件，包含一系列 sed 命令
 
 ### 匹配
 
@@ -67,7 +68,7 @@ $ man sed
 
 `p` 指打印
 
-``` shell
+```shell
 # 1p 指打印第一行
 $ ps -ef | sed -n 1p
 UID        PID  PPID  C STIME TTY          TIME CMD
@@ -87,7 +88,7 @@ root         5     2  0 Sep29 ?        00:00:00 [kworker/0:0H]
 
 > 注意需要使用单引号
 
-``` shell
+```shell
 $ ps -ef | sed -n '$p'
 ```
 
@@ -95,7 +96,7 @@ $ ps -ef | sed -n '$p'
 
 `d` 指删除
 
-``` shell
+```shell
 $ cat hello.txt
 hello, one
 hello, two
@@ -111,7 +112,7 @@ hello, two
 
 与 `grep` 类似，不过 `grep` 可以高亮关键词
 
-``` shell
+```shell
 $ ps -ef | sed -n /ssh/p
 root      1188     1  0 Sep29 ?        00:00:00 /usr/sbin/sshd -D
 root      9291  1188  0 20:00 ?        00:00:00 sshd: root@pts/0
@@ -129,7 +130,7 @@ root     14766     1  0 Sep30 ?        00:00:00 ssh-agent -s
 
 ### 删除匹配字符串的行
 
-``` shell
+```shell
 $ cat hello.txt
 hello, one
 hello, two
@@ -144,7 +145,7 @@ hello, three
 
 `s` 代表替换，与 vim 类似
 
-``` shell
+```shell
 $ echo hello | sed s/hello/world/
 world
 ```
@@ -153,7 +154,7 @@ world
 
 `a` 与 `i` 代表在新一行添加内容，与 vim 类似
 
-``` shell
+```shell
 # i 指定前一行
 # a 指定后一行
 # -e 指定脚本
@@ -165,7 +166,7 @@ hello append
 
 ### 替换文件内容
 
-``` shell
+```shell
 $ cat hello.txt
 hello, world
 hello, world
@@ -185,7 +186,7 @@ world, world
 
 使用 `brew install gnu-sed` 安装
 
-``` shell
+```shell
 $ echo "hello" | sed "s/\bhello\b/world/g"
 hello
 $ brew install gnu-sed

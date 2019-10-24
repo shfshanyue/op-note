@@ -14,7 +14,7 @@ date: 2019-10-21 20:37
 
 ## 部署
 
-``` shell
+```shell
 # 使用 helm v2 部署
 $ helm install stable/postgresql
 

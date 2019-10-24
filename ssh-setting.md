@@ -31,7 +31,7 @@ description: ssh keygen 生成非对称加密中的 public-key 与 private-key�
 
 可以使用 `ssh -T` 测试连通性
 
-``` shell
+```shell
 $ git clone git@github.com:vim/vim.git
 Cloning into 'vim'...
 Warning: Permanently added the RSA host key for IP address '13.229.188.59' to the list of known hosts.
@@ -50,7 +50,7 @@ Permission denied (publickey).
 
 使用 `ssh-keygen` 可以生成配对的 `id_rsa` 与 `id_rsa.pub` 文件
 
-``` shell
+```shell
 # 生成一个 ssh-key
 # -t: 可选择 dsa | ecdsa | ed25519 | rsa | rsa1，代表加密方式
 # -C: 注释，一般写自己的邮箱
@@ -65,7 +65,7 @@ authorized_keys  config  id_rsa  id_rsa.pub  known_hosts
 
 在云服务器中复制 `~/.ssh/id_rsa.pub` 中文件内容，并粘贴到 [github 的配置](https://shanyue.tech/op/init) 中
 
-``` shell
+```shell
 $ cat ~/.ssh/id_rsa.pub
 ssh-rsa AAAAB3SSSSSSSSSSSSSSSSSSSSSBAQDcM4aOo9qlrHOnh0+HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHuM9cYmdKq5ZMfO0dQ5PB53nqZQ1YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAc1w7bC0PD02M706ZdQm5M9Q9VFzLY0TK1nz19fsh2I2yuKwHJJeRxsFAUJKgrtNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN7nm6B/9erp5n4FDKJFxdnFWuhqqUwMzRa9rUfhOX1qJ1SYAWUryQ90rpxOwXt9Pfq0Y13VsWk3QQ8nyaEJzytEXG7OR9pf9zDQph4r4rpJbXCwNjXn/ThL shanyue
 ```
@@ -78,7 +78,7 @@ ssh-rsa AAAAB3SSSSSSSSSSSSSSSSSSSSSBAQDcM4aOo9qlrHOnh0+HHHHHHHHHHHHHHHHHHHHHHHHH
 
 使用 `ssh -T` 测试成功， 此时可以成功的面向 github 编程了
 
-``` shell
+```shell
 $ ssh -T git@github.com
 Hi shfshanyue! You've successfully authenticated, but GitHub does not provide shell access.
 

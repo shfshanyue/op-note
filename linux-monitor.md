@@ -47,7 +47,7 @@ htop 足以覆盖大多数指标，详细直接查看帮助即可。
 + 如何查看 CPU model
 + 如何查看 CPU 主频
 
-``` shell
+```shell
 cat /proc/cpuinfo
 cat /proc/stat
 ```
@@ -56,7 +56,7 @@ cat /proc/stat
 
 使用 `uptime` 和 `w` 可打印出系统过去 1, 5, 15 分钟内的平均负载。同时，你可以使用 `sar -q` 查看动态的平均负载。
 
-``` shell
+```shell
 $ uptime
  19:28:49 up 290 days, 20:25,  1 user,  load average: 2.39, 2.64, 1.55
 $ w
@@ -75,7 +75,7 @@ root     pts/0    172.16.0.1    19:27    6.00s  0.05s  0.00s tmux a
 
 ## 动态平均负载
 
-``` shell
+```shell
 $ sar -q 1 100
 Linux 3.10.0-957.21.3.el7.x86_64 (shanyue)      10/21/19        _x86_64_        (2 CPU)
 
@@ -96,7 +96,7 @@ Average:            0       464      0.06      0.10      0.13         0
 
 `CPU 利用率 = 1 - cpu-idle-time / cpu-time`
 
-``` shell
+```shell
 $ top
 %Cpu(s):  7.4 us,  2.3 sy,  0.0 ni, 90.1 id,  0.0 wa,  0.0 hi,  0.2 si,  0.0 st
 ```
@@ -117,7 +117,7 @@ $ top
 + `-p` 指定pid
 + `-c` 统计各项系统调用被调用了多少次以及CPU时间
 
-``` shell
+```shell
 # 用来看一个进程所用到的系统调用
 # -p: 指定 7477 号进程
 $ strace -p 7477
@@ -135,7 +135,7 @@ $ strace -p 7477 -c
 
 如果查看进程内存，使用 `pidstat -r` 或者 `htop`
 
-``` shell
+```shell
 $ free -h
               total        used        free      shared  buff/cache   available
 Mem:           3.7G        682M        398M        2.1M        2.6G        2.7G
@@ -153,7 +153,7 @@ Swap:            0B          0B          0B
 + 如何获取进程的CPU占用率
 + 如何获取进程的内存占用
 
-``` shell
+```shell
 # 查看 122 PID 进程
 $ ps 122
 
@@ -196,7 +196,7 @@ $ pstree 122 -sap
 + 查看过多的僵尸进程
 + 当平均负载过大时
 
-``` shell
+```shell
 # 第二行可以统计所有进程的状态信息
 $ top
 ...
@@ -208,7 +208,7 @@ Tasks: 214 total,   1 running, 210 sleeping,   0 stopped,   3 zombie
 
 `ps -O rss` 指定 rss 可以查看进程的内存，另外还有命令 `top/htop` 与 `pidstat -r`
 
-``` shell
+```shell
 # 查看 2579 PID 的内存
 # -O rss 代表附加 RSS 信息进行打印
 $ ps -O rss 2579
@@ -220,7 +220,7 @@ $ ps -O rss 2579
 
 `pidstat -sr`
 
-``` shell
+```shell
 # 查看 23097 PID 的内存信息，每隔一秒打印一次
 # -r: 查看进程的内存信息
 # -s: 查看进程的 stack 信息
@@ -253,7 +253,7 @@ Average:        0     23097      0.00      0.00  366424  95996   2.47    136    
 
 `pidstat -s` 中 `minflt` 与 `majflt` 代表缺页异常
 
-``` shell
+```shell
 $ pidstat -s -p 23097 1 5
 Linux 3.10.0-693.2.2.el7.x86_64 (shanyue)       07/18/19        _x86_64_        (2 CPU)
 
@@ -272,7 +272,7 @@ Linux 3.10.0-693.2.2.el7.x86_64 (shanyue)       07/18/19        _x86_64_        
 
 `lsof`, list open files
 
-``` shell
+```shell
 # 列出打开的文件
 $ lsof
 COMMAND     PID   TID     USER   FD      TYPE             DEVICE    SIZE/OFF       NODE NAME
@@ -284,7 +284,7 @@ systemd       1           root  rtd       DIR              253,1        4096    
 
 换一个问题就是，**如何找出 docker 容器中的 pid 在宿主机对应的 pid**
 
-``` shell
+```shell
 # 容器环境
 
 # 已知容器中该进程 PID 为 122
@@ -294,7 +294,7 @@ node (7477, #threads: 7)
 ...
 ```
 
-``` shell
+```shell
 # 宿主机环境
 
 # 7477 就是对应的 global PID，在宿主机中可以找到
@@ -311,7 +311,7 @@ root      7477  7161  0 Jul10 ?        00:00:38 node index.js
 
 **常见的场景就是使用 `top/htop` 定位到占用内存/CPU过高的进程，此时需要定位到它所在的容器**
 
-``` shell
+```shell
 # 通过 docker inspect 查找到对应容器
 $ docker ps -q | xargs docker inspect --format '{{.State.Pid}}, {{.ID}}' | grep 22932
 
@@ -325,14 +325,14 @@ $ cat /etc/22932/cgroup
 
 ## SWAP
 
-``` shell
+```shell
 # 查找关于
 $ vmstat -s
 ```
 
 ## inode
 
-``` shell
+```shell
 # -i: 打印 inode number
 $ ls -lahi
 ```
@@ -343,7 +343,7 @@ $ ls -lahi
 + 吞吐量: 代表单位时间内成功传输的数据量，单位为 b/s (KB/s, MB/s)
 + PPS: pck/s (Packet Per Second)，以网络包为单位的传输速率
 
-``` shell
+```shell
 # 查看网卡信息
 $ ifconfig eth0
 
@@ -363,7 +363,7 @@ Average:         eth0     18.60     14.60      1.45     18.02      0.00      0.0
 
 推荐使用 `ss`，不过 `netstat` 仍需要掌握，在特定条件 (docker 中) 有可能没有 `ss` 命令。
 
-``` shell
+```shell
 # -t TCP
 # -a 所有状态
 # -n 显示数字地址和端口号
@@ -380,7 +380,7 @@ tcp        0      0 :::80                   :::*                    LISTEN      
 
 ## 协议信息
 
-``` shell
+```shell
 # 展示对每个协议的统计信息
 $ netstat -s
 
@@ -406,7 +406,7 @@ $ netstat -tanp | grep ESTAB | wc -l
 
 ## PostgresSQL 的最大连接数与当前连接数
 
-``` sql
+```sql
 -- 最大连接数
 show max_connections;
 
@@ -416,7 +416,7 @@ select count(*) from pg_stat_activity;
 
 ## mysql 的最大连接数与当前连接数
 
-``` sql
+```sql
 -- 最大连接数
 show variables like 'max_connections';
 
