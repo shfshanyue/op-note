@@ -1,14 +1,23 @@
-# 云服务器运维笔记
+# 当我有服务器时我做了什么 · 我的服务器运维笔记
 
 ## 目录
 
+> 你进入服务器后首先敲的5个命令是什么？
+
+1. [序·当我有一台服务器时我做了什么]()
+1. [序·当我有一台服务器时我做了什么(2019)]()
+
 ### 如果没有服务器 · PaaS
 
-1. [使用 netlify 托管静态网站]()
-1. [注册域名邮箱]()
+1. [静态网站托管: netlify]()
+1. [免费的 API Server 与数据存储]()
+1. [申请你的域名邮箱]()
 
 ### 服务器初始配置
 
+> 当我有了服务器时，我应该先在上边做点什么准备工作？
+
+1. [服务器的准备工作]()
 1. [服务器初始登录配置：ssh-config](https://github.com/shfshanyue/op-note/blob/master/init.md)
 1. [服务器ssh key 以及 git 的配置](https://github.com/shfshanyue/op-note/blob/master/ssh-setting.md)
 1. [系统信息查看相关命令](https://github.com/shfshanyue/op-note/blob/master/system-info.md)
