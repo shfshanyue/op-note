@@ -4,6 +4,8 @@ keywords: vim,linux,vim插件,vim前端,vim常用快捷键,vim高级技巧,vim�
 description: 当你有一个服务器，或者运维若干服务器时，没有什么比不够熟练 vim 更让人难受和窝心的事情了。而在各种编辑器中 vim 模式也大受欢迎。因此，学习 vim 是很有必要的。
 date: 2019-10-12 23:00
 sidebarDepth: 3
+tags:
+  - linux
 
 ---
 

@@ -1,5 +1,9 @@
 ---
 title: 带着问题学习 ansible
+tags:
+  - devops
+  - linux
+
 ---
 
 # ansible 中的细节问题

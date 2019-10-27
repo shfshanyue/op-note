@@ -3,6 +3,8 @@ title: 服务器登录配置
 date: 2019-10-10 23:00
 keywords: 云服务器登录,ssh-config,ssh免密登录,ssh及服务器登录配置,ssh禁止密码登录
 description: 当刚拥有服务器后，首先需要登录服务器，本节主要有以下三个实践操作：快速登录，免密登录，禁用密码。
+tags:
+  - linux
 
 ---
 

@@ -3,6 +3,9 @@ title: ansible 自动化运维指南
 keywords: linux,ansible,自动化运维,ansible安装
 desription: 使用 ansible 可以进行批量配置，批量安装软件，省了一大部分繁琐的重复工作，提高了管理服务器的效率。本章介绍如何使用 ansible 的安装以及关于 ansible 的基本功能。建议拥有云服务器的同学都可以学习一下 ansible
 date: 2019-10-23 22:00
+tags:
+  - devops
+  - linux
 
 ---
 

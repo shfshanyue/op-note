@@ -4,6 +4,9 @@ keywords: linux cput,linux memory,linux process,linux监控
 description: 自开始负责生产环境部署，中间遇到了若干线上环境内存以及CPU的问题。由于微服务以及容器的流行，现在已经可以很方便的使用 K8s + prometheus + grafana + alert 的方式进行监控，这足以覆盖大部分场景。
 date: 2019-07-05 16:03
 hot: 6
+tags:
+  - linux
+  - devops
 
 ---
 

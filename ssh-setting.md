@@ -3,6 +3,8 @@ title: ssh public key 与 git 的配置
 date: 2019-10-11 23:00
 keywords: ssh-keygen,permission denied (publickey),git clone 的配置,ssh -T
 description: ssh keygen 生成非对称加密中的 public-key 与 private-key，并把 publick-key 扔到 github 上。与上篇文章配置服务器免登陆一样的步骤。
+tags:
+  - linux
 
 ---
 

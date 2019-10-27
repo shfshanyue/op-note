@@ -4,6 +4,8 @@ keywords: linux,tmux,ansible,centos中安装tmux,linux多窗口管理,终端复�
 description: tmux 是一个终端复用器，这也是它命名的由来 t(terminal) mux(multiplexer)，你可以在一个屏幕上管理多个终端！
 date: 2019-10-23 20:00
 sidebarDepth: 3
+tags:
+  - linux
 
 ---
 

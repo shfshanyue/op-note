@@ -8,6 +8,7 @@ categories:
   - 运维
 tags:
   - devops
+  - linux
 hot: 10
 
 ---

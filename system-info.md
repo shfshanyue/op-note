@@ -3,6 +3,8 @@ title: linux 基础信息查看以及相关命令
 keywords: 服务器系统信息,平均负载,系统监控,linux内存与CPU,linux版本,centos版本
 description: "关于云服务器系统的基础信息一般在购买时就有标明，至于一些资源的使用在云服务器服务商的控制台上也有相应的监控，如果你对监控有更细致化的需求，采用 node exporter + cadvisor + prometheus + grafana 也可以做地更为精细。但是最重要的是: 你要了解哪些指标，以及它们如何在服务器上用命令敲出来"
 date: 2019-10-02 14:00
+tags:
+  - linux
 
 ---
 

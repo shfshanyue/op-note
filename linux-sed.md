@@ -4,6 +4,8 @@ keywords: sed examples,mac中的sed,sed删除文件,sed替换文件
 description: sed 是一个用来筛选与转换文本内容的工具。一般用来批量替换，删除某行文件。如果想在 mac 中使用 sed，请使用 gsed 代替，不然会被坑
 date: 2019-10-18 22:00
 sidebarDepth: 3
+tags:
+  - linux
 
 ---
 
