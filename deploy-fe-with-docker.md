@@ -1,10 +1,7 @@
 ---
 title: 如何使用 docker 高效部署前端应用
 description: docker 变得越来越流行，它可以轻便灵活地隔离环境，进行扩容，方便运维管理。对开发者也更方便开发，测试与部署。这里介绍如何使用 Docker 部署前端应用。千里之行，始于足下，足下的意思就是，先让它能够跑起来。
-keywords:
-  - docker
-  - 使用 docker 部署前端
-  - 优化 dockerfile
+keywords: docker,前端,使用docker部署前端,优化dockerfile
 date: 2019-03-09
 hot: 11
 tags:
@@ -20,7 +17,7 @@ categories:
 
 docker 变得越来越流行，它可以轻便灵活地隔离环境，进行扩容，方便运维管理。对开发者也更方便开发，测试与部署。
 
-最重要的是， **当你面对一个陌生的项目，你可以照着 Dockerfile，甚至不看文档(文档也不一定全，全也不一定对)就可以很快让它在本地跑起来。**
+最重要的是，**当你面对一个陌生的项目，你可以照着 Dockerfile，甚至不看文档(文档也不一定全，全也不一定对)就可以很快让它在本地跑起来。**
 
 <!--more-->
 
@@ -74,7 +71,7 @@ CMD http-server ./public -p 80
 
 对于每次部署，如果能够减少无用包的下载，便能够节省很多镜像构建时间。eslint，mocha，chai 等代码风格测试模块可以放到 devDependencies 中。在生产环境中使用 `npm install --production` 装包。
 
-> 关于两者的区别可以参考文档  https://docs.npmjs.com/files/package.json.html#dependencies
+> 关于两者的区别可以参考文档: https://docs.npmjs.com/files/package.json.html#dependencies
 
 ```Dockerfile
 FROM node:alpine
@@ -138,7 +135,7 @@ CMD http-server ./public -p 80
 
 关于镜像体积的过大，很大一部分是因为node_modules 臭名昭著的体积
 
-![node_modules的体积](https://blog.xiange.tech/post/deploy-frontend-with-docker/node_modules.jpeg)
+![node_modules的体积](https://raw.githubusercontent.com/shfshanyue/op-note/master/assets/tmux-help.jpg)
 
 但最后我们只需要 public 文件夹下的内容，对于源文件以及node_modules下文件，占用体积过大且不必要，造成浪费。
 
