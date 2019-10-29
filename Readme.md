@@ -12,10 +12,10 @@
 
 ## 目录
 
-1. [序·当我有一台服务器时我做了什么](https://github.com/shfshanyue/op-note/blob/master/when-server.md)
+1. [序·当我有一台服务器时我做了什么](https://github.com/shfshanyue/op-note/blob/master/when-server.md) · [(掘金)](https://juejin.im/post/5c9232a8e51d45729b3b71e1)
 1. [序·当我有一台服务器时我做了什么(2019)]() - TODO
 
-### 如果没有服务器 · PaaS
+## 00 如果没有服务器 · PaaS
 
 随着 PaaS 的流行， **没有钱没有服务器也可以作很多事情**。如
 
@@ -28,13 +28,13 @@
 
 **如果说有什么缺陷的话，那就是因为网络而造成的速度问题了。** 本章目录如下
 
-1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md)
+1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md) · [(掘金)](https://juejin.im/post/5db78500f265da4d0a68cef7)
 1. [静态网站托管: netlify]() - TODO
 1. [免费的 API Server 与数据存储]() - TODO
 1. [申请你的域名邮箱]() - TODO
 1. [使用 sentry 做异常监控]() - TODO
 
-### 服务器初始配置
+## 01 服务器初始配置
 
 当我有了服务器时，我应该先在上边做点什么准备工作？
 
@@ -45,21 +45,21 @@
 
 **如果使用 `ansible`，能够在三分钟内快速配置完所有前置准备工作。** 本章目录如下
 
-1. [服务器初始登录配置：ssh-config](https://github.com/shfshanyue/op-note/blob/master/init.md)
-1. [服务器ssh key 以及 git 的配置](https://github.com/shfshanyue/op-note/blob/master/ssh-setting.md)
-1. [系统信息查看相关命令](https://github.com/shfshanyue/op-note/blob/master/system-info.md)
-1. [使用 vim 及其配置](https://github.com/shfshanyue/op-note/blob/master/vim-config.md)
-1. [窗口复用与 tmux](https://github.com/shfshanyue/op-note/blob/master/tmux-config.md)
+1. [服务器初始登录配置：ssh-config](https://github.com/shfshanyue/op-note/blob/master/init.md) · [(掘金)](https://juejin.im/post/5da724506fb9a04e2a73d96c)
+1. [服务器ssh key 以及 git 的配置](https://github.com/shfshanyue/op-note/blob/master/ssh-setting.md) · [(掘金)](https://juejin.im/post/5da7be00e51d45781c6fcd2d)
+1. [系统信息查看相关命令](https://github.com/shfshanyue/op-note/blob/master/system-info.md) · [(掘金)](https://juejin.im/post/5dad7681f265da5bb86ad2f5)
+1. [使用 vim 及其配置](https://github.com/shfshanyue/op-note/blob/master/vim-config.md) · [(掘金)](https://juejin.im/post/5dae491b5188251d2c4ea40d)
+1. [窗口复用与 tmux](https://github.com/shfshanyue/op-note/blob/master/tmux-config.md) · [(掘金)](https://juejin.im/post/5dafabd86fb9a04df00ef01f)
 1. [openvpn 配置与内网安全](https://github.com/shfshanyue/op-note/blob/master/vpn-config.md) - TODO
 
-### 自动化运维
+## 02 自动化运维
 
 在做服务器初始的准备工作中，如果只有一台服务器就很简单，但是有了多台就需要考虑一下自动化运维了
 
-1. [使用 ansible 做自动化运维](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md)
+1. [使用 ansible 做自动化运维](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md) · [(掘金)](https://juejin.im/post/5dafb50c6fb9a04e1325f2ff)
 1. [ansible 中的细节问题](https://github.com/shfshanyue/op-note/blob/master/ansible-problem.md) - TODO
 
-### docker 与应用开发
+## 03 docker 与应用开发
 
 当服务器的准备工作结束后，就可以使用它部署一些服务或者简单的应用了: 
 
@@ -74,25 +74,27 @@
 1. [如何使用 docker 高效部署前端](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
 1. [部署异常监控服务 Sentry](https://github.com/shfshanyue/op-note/blob/master/deploy-sentry.md)
 
-### kubernetes 与应用开发
+## 04 kubernetes 与应用开发
 
 如果你有多台服务器，建议尽可能搭建一个 k8s cluster。结合 `kubernetes` 与 `helm`，部署也变得相当简单了
 
 1. [搭建一个 k8s 集群]() - TODO
-1. [使用 k8s 自动生成 https 证书](https://github.com/shfshanyue/learn-k8s/blob/master/https.md)
+1. [部署你的第一个应用: Pod，Deployment 与 Service](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md) · [(掘金)](https://juejin.im/post/5db8c2b46fb9a020256692dc)
+1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md) · [(掘金)](https://juejin.im/post/5db8da4b6fb9a0204520b310)
+1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.md) · [(掘金)](https://juejin.im/post/5db8d94be51d4529f73e2833)
 
-### 监控
+## 05 监控
 
-1. [linux 各项监控指标](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md)
+1. [linux 各项监控指标](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md) · [(掘金)](https://juejin.im/post/5dae57fbf265da5b5b6c7881)
 1. [linux 监控与报警]() - TODO
 
-### 高频 linux 命令
+## 06 高频 linux 命令
 
 记录下来备忘
 
-1. [sed](https://github.com/shfshanyue/op-note/blob/master/linux-sed.md)
+1. [sed](https://github.com/shfshanyue/op-note/blob/master/linux-sed.md) · [(掘金)](https://juejin.im/post/5db1053df265da4d57770c30)
 1. [awk](https://github.com/shfshanyue/op-note/blob/master/linux-awk.md)
-1. [jq](https://github.com/shfshanyue/op-note/blob/master/jq.md)
+1. [jq](https://github.com/shfshanyue/op-note/blob/master/jq.md) · [(掘金)](https://juejin.im/post/5db104f7f265da4d2e121510)
 1. [iptables](https://github.com/shfshanyue/op-note/blob/master/iptables.md)
 1. [htop](https://github.com/shfshanyue/op-note/blob/master/htop.md)
 
