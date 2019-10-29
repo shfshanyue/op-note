@@ -67,7 +67,8 @@
 
 如果你刚刚接触服务器，我建议你学习并实践下 docker，不管你是一个前端还是后端都会大有裨益，目录如下
 
-1. [如何使用 docker 部署前端](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
+1. [如何使用 docker 高效部署前端](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
+1. [部署异常监控服务 Sentry](https://github.com/shfshanyue/op-note/blob/master/deploy-sentry.md)
 
 ### kubernetes 与应用开发
 
