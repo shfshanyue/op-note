@@ -2,14 +2,18 @@
 
 去年我写了一篇文章: [当我有一台服务器时做了什么](https://shanyue.tech/op/when-server)。当时为了不至于浪费我在阿里云低价优惠买的服务器，于是使用 docker 跑了一个应用，并参照我司的技术架构搭建了相关的基础设施。
 
-**现在仔细想来，这些经验也非常有益于有一台服务器却不知所措的人，于是有了本系列文章，希望能够帮助到那些服务器买来已久却在吃灰的人。** 另外如果你是一个自由开发者，本系列文章或许对你环境搭建也会有些许启发。
+**现在仔细想来，这些经验也非常有益于有一台服务器却不知所措的人，于是有了本系列文章，希望能够帮助到那些服务器买来已久却在吃灰的人。** 另外如果你是一个自由开发者，本系列文章或许对你环境搭建也会有些许启发。如果对你能够有所帮助，可以帮我在 [shfshanyue/op-note](https://github.com/shfshanyue/op-note) 上点个 star。
+
+如果你是新人的话，目前在阿里云买机器会有优惠，可以点击 [链接](https://www.aliyun.com/1111/2019/group-buying-share?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link) 购买
+
++ [邀请你一起 86元/年 购买云服务器](https://www.aliyun.com/1111/2019/group-buying-share?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link)
 
 <!--more-->
 
 ## 目录
 
-1. [序·当我有一台服务器时我做了什么]()
-1. [序·当我有一台服务器时我做了什么(2019)]()
+1. [序·当我有一台服务器时我做了什么](https://github.com/shfshanyue/op-note/blob/master/when-server.md)
+1. [序·当我有一台服务器时我做了什么(2019)]() - TODO
 
 ### 如果没有服务器 · PaaS
 
@@ -24,11 +28,11 @@
 
 **如果说有什么缺陷的话，那就是因为网络而造成的速度问题了。** 本章目录如下
 
-1. [如果你只想搭一个博客]()
-1. [静态网站托管: netlify]()
-1. [免费的 API Server 与数据存储]()
-1. [申请你的域名邮箱]()
-1. [使用 sentry 做异常监控]()
+1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md)
+1. [静态网站托管: netlify]() - TODO
+1. [免费的 API Server 与数据存储]() - TODO
+1. [申请你的域名邮箱]() - TODO
+1. [使用 sentry 做异常监控]() - TODO
 
 ### 服务器初始配置
 
@@ -46,14 +50,14 @@
 1. [系统信息查看相关命令](https://github.com/shfshanyue/op-note/blob/master/system-info.md)
 1. [使用 vim 及其配置](https://github.com/shfshanyue/op-note/blob/master/vim-config.md)
 1. [窗口复用与 tmux](https://github.com/shfshanyue/op-note/blob/master/tmux-config.md)
-1. [openvpn 配置与内网安全](https://github.com/shfshanyue/op-note/blob/master/vpn-config.md)
+1. [openvpn 配置与内网安全](https://github.com/shfshanyue/op-note/blob/master/vpn-config.md) - TODO
 
 ### 自动化运维
 
 在做服务器初始的准备工作中，如果只有一台服务器就很简单，但是有了多台就需要考虑一下自动化运维了
 
 1. [使用 ansible 做自动化运维](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md)
-1. [ansible 中的细节问题](https://github.com/shfshanyue/op-note/blob/master/ansible-problem.md)
+1. [ansible 中的细节问题](https://github.com/shfshanyue/op-note/blob/master/ansible-problem.md) - TODO
 
 ### docker 与应用开发
 
@@ -74,13 +78,13 @@
 
 如果你有多台服务器，建议尽可能搭建一个 k8s cluster。结合 `kubernetes` 与 `helm`，部署也变得相当简单了
 
-1. [搭建一个 k8s 集群]()
-1. [部署 postgres]()
+1. [搭建一个 k8s 集群]() - TODO
+1. [使用 k8s 自动生成 https 证书](https://github.com/shfshanyue/learn-k8s/blob/master/https.md)
 
 ### 监控
 
 1. [linux 各项监控指标](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md)
-1. [linux 监控与报警]()
+1. [linux 监控与报警]() - TODO
 
 ### 高频 linux 命令
 
@@ -91,4 +95,10 @@
 1. [jq](https://github.com/shfshanyue/op-note/blob/master/jq.md)
 1. [iptables](https://github.com/shfshanyue/op-note/blob/master/iptables.md)
 1. [htop](https://github.com/shfshanyue/op-note/blob/master/htop.md)
+
+## 关注公众号
+
+欢迎关注公众号**山月行**，我会定期分享一些前后端以及运维的文章，并且会有技术与生活上的每日回顾与总结，欢迎关注交流
+
+![欢迎关注公众号山月行，我会定期分享一些前后端以及运维的文章](https://shanyue.tech/qrcode.jpg)
 
