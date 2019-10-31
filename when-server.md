@@ -1,8 +1,6 @@
 ---
 title: 当我有一台服务器时我做了什么
-description: ""
-keywords:
-  - 服务器
+keywords: linux,docker,next,graphql,grafana,prometheus,elk,服务器
 date: 2019-01-21T09:56:29+08:00
 categories:
   - 运维
@@ -163,7 +161,7 @@ vim 和 tmux 在linux上是标配，提高在服务器的工作效率，建议�
 1. 在 grafana 找一个 star 多的 Dashboard
 2. 根据需要微改一下
 
-![grafana](https://raw.githubusercontent.com/shfshanyue/blog/master/post/server-todo/grafana.jpg)
+![grafana](./assets/grafana.jpg)
 
 自从用上了时序数据库，我的磁盘空间也日渐缩小
 

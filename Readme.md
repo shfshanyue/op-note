@@ -2,7 +2,9 @@
 
 去年我写了一篇文章: [当我有一台服务器时做了什么](https://shanyue.tech/op/when-server)。当时为了不至于浪费我在阿里云低价优惠买的服务器，于是使用 docker 跑了一个应用，并参照我司的技术架构搭建了相关的基础设施。
 
-**现在仔细想来，这些经验也非常有益于有一台服务器却不知所措的人，于是有了本系列文章，希望能够帮助到那些服务器买来已久却在吃灰的人。** 另外如果你是一个自由开发者，本系列文章或许对你环境搭建也会有些许启发。如果对你能够有所帮助，可以帮我在 [shfshanyue/op-note](https://github.com/shfshanyue/op-note) 上点个 star。
+**现在仔细想来，这些经验也非常有益于有一台服务器却不知所措的人，于是有了本系列文章，希望能够帮助到那些服务器买来已久却在吃灰的人。** 另外如果你是一个自由开发者，本系列文章或许对你环境搭建也会有些许启发。
+
+> 如果对你能够有所帮助，可以帮我在 [shfshanyue/op-note](https://github.com/shfshanyue/op-note) 上点个 star。
 
 如果你是新人的话，目前在阿里云买机器会有优惠，可以点击 [链接](https://www.aliyun.com/1111/2019/group-buying-share?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link) 购买
 
@@ -78,7 +80,7 @@
 
 如果你有多台服务器，建议尽可能搭建一个 k8s cluster。结合 `kubernetes` 与 `helm`，部署也变得相当简单了
 
-1. [搭建一个 k8s 集群]() - TODO
+1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
 1. [部署你的第一个应用: Pod，Deployment 与 Service](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md) · [(掘金)](https://juejin.im/post/5db8c2b46fb9a020256692dc)
 1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md) · [(掘金)](https://juejin.im/post/5db8da4b6fb9a0204520b310)
 1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.md) · [(掘金)](https://juejin.im/post/5db8d94be51d4529f73e2833)
