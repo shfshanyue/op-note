@@ -116,4 +116,4 @@ tags:
 1. `via` 通过的代理节点
 1. `x-cache: HIT` 在CDN上命中缓存
 
-![proxy cache](https://raw.githubusercontent.com/shfshanyue/op-note/master/assets/cdn-cache.jpg)
+![proxy cache](./assets/cdn-cache.jpg)
