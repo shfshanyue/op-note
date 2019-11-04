@@ -42,6 +42,7 @@
     1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md) · [(掘金)](https://juejin.im/post/5db8da4b6fb9a0204520b310)
     1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.md) · [(掘金)](https://juejin.im/post/5db8d94be51d4529f73e2833)
     1. [部署利器 Helm 安装及简介](https://github.com/shfshanyue/learn-k8s/blob/master/helm.md)
+    1. [github 上的持续集成方案 drone.ci 简介及部署](https://github.com/shfshanyue/op-note/blob/master/deploy-drone.md)
 1. 监控
     1. [linux 各项监控指标](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md) · [(掘金)](https://juejin.im/post/5dae57fbf265da5b5b6c7881)
     1. [linux 监控与报警]() - TODO
@@ -120,6 +121,7 @@
 1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md) · [(掘金)](https://juejin.im/post/5db8da4b6fb9a0204520b310)
 1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.md) · [(掘金)](https://juejin.im/post/5db8d94be51d4529f73e2833)
 1. [部署利器 Helm 安装及简介](https://github.com/shfshanyue/learn-k8s/blob/master/helm.md)
+1. [github 上的持续集成方案 drone.ci 简介及部署](https://github.com/shfshanyue/op-note/blob/master/deploy-drone.md)
 
 ## 05 监控
 

@@ -1,5 +1,5 @@
 ---
-title: "github 上持续集成方案 drone 的部署"
+title: "github 上持续集成方案 drone 的简介及部署"
 keywords: github,helm,k8s,drone,CI
 date: 2019-11-01 07:00
 tags:
@@ -7,9 +7,33 @@ tags:
 
 ---
 
-# 使用 helm 部署 drone.ci
+# drone.ci 简介及部署
 
-至于如何使用 helm，可以参考我以前的文章: []()
+一般小型公司的持续集成方案会选择: `gitlab` + `gitlab CI`，当然部分公司也会选择 `jenkins`。
+
+选择 `gitlab CI` 的原因很简单，因为使用了 `gitlab CE` 作为代码托管平台。那为什么选择了 `gitlab` 作为代码托管呢， `gitlab CE` 是免费版(社区版)，对于昂贵的 toB 软件来说，一家公司至少省了几十万的开销，而且支持自建平台，搭在自家的服务器中，安全性得到了保证。
+
+而对比 `gitlab` 的同一类产品，世界最大的同性社交网站 `github` 来说，随着微软的收购，`github` 也越来越开放了，它不仅免费开放了私有仓库，现在也可以通过 `github action` 来做简单的 CI。
+
+对于个人，自有开发者以及小型公司来说，拥有免费仓库的 `github` 也是一个不错的选择。
+
+[drone](https://drone.io/) 是基于容器的构建服务，配置简单且免费，在 github 上也有 20K star。如果你的仓库主要都在 github，你会喜欢上它的
+
+> 随着 github action 的发展，github + github-action 也是个人以及小型公司可选的持续集成方案，不过由于它属于公共构建服务的缘故，镜像构建以及镜像拉取速度会是一个问题，这要取舍
+
+本篇文章单单介绍 `drone.ci` 的部署
+
++ 原文地址: [](https://shanyue.tech/op/deploy-drone)
++ 系列文章: [个人服务器运维指南](https://shanyue.tech/op)
+
+## 环境
+
+`kubernetes` 集群，并使用 `helm` 部署。如果不具备这两个条件可以参考我以前的文章
+
++ [k8s 集群搭建](https://github.com/shfshanyue/learn-k8s)
++ [k8s 中 helm 安装以及使用指南](https://github.com/shfshanyue/learn-k8s/blob/master/helm.md)
+
+## 部署
 
 > 为了更好地真实环境效果，在命令演示过程中我会使用我真实的域名: `drone.xiange.tech`，你需要替换成你自己的域名
 
@@ -119,3 +143,4 @@ drone-drone-server   1/1     1            1           6h44
 打开浏览器，查看域名 `drone.xiange.tech`，经过 `github` 授权后可以看到 `drone.ci` 的管理页面
 
 ![drone部署成功](./assets/drone.jpg)
+
