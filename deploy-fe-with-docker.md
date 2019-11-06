@@ -38,7 +38,7 @@ docker 变得越来越流行，它可以轻便灵活地隔离环境，进行扩�
 
 介绍完部署流程后，简单写一个 Dockerfile
 
-```Dockerfile
+``` docker
 FROM node:alpine
 
 # 代表生产环境
@@ -73,7 +73,7 @@ CMD http-server ./public -p 80
 
 > 关于两者的区别可以参考文档: https://docs.npmjs.com/files/package.json.html#dependencies
 
-```Dockerfile
+``` docker
 FROM node:alpine
 
 ENV PROJECT_ENV production
@@ -94,7 +94,7 @@ CMD http-server ./public -p 80
 
 对于 `ADD` 来讲，如果需要添加的内容没有发生变化，则可以利用缓存。把 package.json 与源文件分隔开写入镜像是一个很好的选择。目前，如果没有新的安装包更新的话，可以节省一半时间
 
-```Dockerfile
+``` docker
 FROM node:alpine
 
 ENV PROJECT_ENV production
@@ -135,7 +135,7 @@ CMD http-server ./public -p 80
 
 关于镜像体积的过大，很大一部分是因为node_modules 臭名昭著的体积
 
-![node_modules的体积](https://raw.githubusercontent.com/shfshanyue/op-note/master/assets/tmux-help.jpg)
+![node_modules的体积](./assets/node_modules.jpg)
 
 但最后我们只需要 public 文件夹下的内容，对于源文件以及node_modules下文件，占用体积过大且不必要，造成浪费。
 
@@ -143,7 +143,7 @@ CMD http-server ./public -p 80
 
 > 参考官方文档 https://docs.docker.com/develop/develop-images/multistage-build/
 
-```Dockerfile
+``` docker
 FROM node:alpine as builder
 
 ENV PROJECT_ENV production
@@ -176,7 +176,7 @@ COPY --from=builder /code/public /usr/share/nginx/html
 + /static，此类文件在项目中直接引用根路径，打包时复制进 /public 下，需要被打入镜像
 + /build，此类文件需要 require 引用，会被 webpack 打包并加 hash 值，并通过 publicPath 修改资源地址。可以把此类文件上传至 cdn，并加上永久缓存，不需要打入镜像
 
-```Dockerfile
+``` docker
 FROM node:alpine as builder
 
 ENV PROJECT_ENV production

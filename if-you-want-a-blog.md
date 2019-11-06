@@ -117,3 +117,8 @@ tags:
 1. `x-cache: HIT` 在CDN上命中缓存
 
 ![proxy cache](./assets/cdn-cache.jpg)
+
+## 相关文章
+
++ [使用 netlify 部署你的前端应用](https://shanue.tech/op/deploy-fe-with-netlify)
++ [如何使用 docker 高效部署前端应用](https://docs.netlify.com/routing/redirects/rewrites-proxies/#limitations)

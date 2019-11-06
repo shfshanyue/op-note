@@ -19,7 +19,7 @@
     1. [序·当我有一台服务器时我做了什么(2019)]() - TODO
 1. 如果没有服务器
     1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md) · [(掘金)](https://juejin.im/post/5db78500f265da4d0a68cef7)
-    1. [静态网站托管: netlify]() - TODO
+    1. [使用 netlify 部署你的前端应用](https://shanue.tech/op/deploy-fe-with-netlify)
     1. [免费的 API Server 与数据存储]() - TODO
     1. [申请你的域名邮箱]() - TODO
     1. [使用 sentry 做异常监控]() - TODO
@@ -67,7 +67,7 @@
 **如果说有什么缺陷的话，那就是因为网络而造成的速度问题了。** 本章目录如下
 
 1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md) · [(掘金)](https://juejin.im/post/5db78500f265da4d0a68cef7)
-1. [静态网站托管: netlify]() - TODO
+1. [使用 netlify 部署你的前端应用](https://shanue.tech/op/deploy-fe-with-netlify)
 1. [免费的 API Server 与数据存储]() - TODO
 1. [申请你的域名邮箱]() - TODO
 1. [使用 sentry 做异常监控]() - TODO

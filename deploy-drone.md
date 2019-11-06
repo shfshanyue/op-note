@@ -23,7 +23,7 @@ tags:
 
 本篇文章单单介绍 `drone.ci` 的部署
 
-+ 原文地址: [](https://shanyue.tech/op/deploy-drone)
++ 原文地址: [drone.ci 简介以及部署](https://shanyue.tech/op/deploy-drone)
 + 系列文章: [个人服务器运维指南](https://shanyue.tech/op)
 
 ## 环境
@@ -143,4 +143,3 @@ drone-drone-server   1/1     1            1           6h44
 打开浏览器，查看域名 `drone.xiange.tech`，经过 `github` 授权后可以看到 `drone.ci` 的管理页面
 
 ![drone部署成功](./assets/drone.jpg)
-
