@@ -20,6 +20,7 @@ tags:
 1. `二级域名`: 你如果没有自己的域名，可以使用它的任意二级域名-只要没有被占用，这比 `github page` 多仓库只能用 `/path` 要好很多
 1. `CDN`: 把你的静态资源推到 CDN，虽然是国外的
 1. `https`: 为你准备证书，当然使用的是 `lets encrypt`
+1. `Prerender`: 结合 `SPA`，做预渲染
 
 **它做的是整个前端部署工作流的事情，而且很多事情都是自动完成的。**
 
@@ -118,5 +119,5 @@ tags:
 
 ## 相关文章
 
-+ [如何使用 docker 高效部署前端应用](https://docs.netlify.com/routing/redirects/rewrites-proxies/#limitations)
++ [如何使用 docker 高效部署前端应用](https://shanyue.tech/op/deploy-fe-with-docker)
 + [如果你只想搭建一个博客](https://shanyue.tech/op/if-you-want-a-blog)
