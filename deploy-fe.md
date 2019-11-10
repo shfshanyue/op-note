@@ -2,12 +2,13 @@
 title: 前端部署演化史
 keywords: 前端部署,devops,helm,docker,k8s
 date: 2019-11-07 21:00
+hot: 13
 tags:
   - devops
 
 ---
 
-前端一说起刀耕火种，那肯定紧随着前端工程化这一话题。随着 `react`/`vue`/`angular`，`es6+`，`webpack`，`babel`，`typescript` 以及 `node` 的发展，前端已经在逐渐替代过去 script 引 cdn 开发的方式了，掀起了工程化这一大浪潮。得益于工程化的发展与开源社区的良好生态，前端应用的可用性与效率得到了很大提高。
+前端一说起刀耕火种，那肯定紧随着前端工程化这一话题。随着 `react`/`vue`/`angular`，`es6+`，`webpack`，`babel`，`typescript` 以及 `node` 的发展，前端已经在逐渐替代过去 `script` 引 `cdn` 开发的方式了，掀起了工程化这一大浪潮。得益于工程化的发展与开源社区的良好生态，前端应用的可用性与效率得到了很大提高。
 
 前端以前是刀耕火种，那前端应用部署在以前也是刀耕火种。那前端应用部署的发展得益于什么，随前端工程化带来的副产品？
 
@@ -29,10 +30,6 @@ tags:
 
 > 如果本篇文章能够对你有所帮助，可以帮我在 [shfshanyue/op-note](https://github.com/shfshanyue/op-note) 上点个 star
 
-如果你是新人的话，目前在阿里云买机器会有优惠，可以点击 [链接](https://www.aliyun.com/1111/2019/group-buying-share?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link) 购买。你可以跟着我的笔记 [服务器运维指南](https://shanyue.tech/op) 来开始维护服务器并搭建应用。
-
-+ [邀请你一起 86元/年 购买云服务器](https://www.aliyun.com/1111/2019/group-buying-share?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link)
-
 ## 刀耕火种
 
 一台跳板机
@@ -50,7 +47,7 @@ tags:
 ``` nginx
 server {
   listen 80;
-  server_name shanyue.tech; 
+  server_name shanyue.tech;
 
   location / {
     # 避免非root路径404
@@ -79,7 +76,7 @@ server {
 
 运维抱怨着前端的部署脚本没有标好 `node` 版本，前端嚷嚷着测试环境没问题
 
-这个时候运维需要费很多心力放在部署上，甚至测试环境的部署上，前端也要操心放在运维如何部署上。这个时候由于怕影响线上环境，上线往往选择在深夜，前端和运维身心俱疲
+这个时候运维需要费很多心力放在部署上，甚至测试环境的部署上，前端也要费很多心力放在运维如何部署上。这个时候由于怕影响线上环境，上线往往选择在深夜，前端和运维身心俱疲
 
 不过向来如此
 
@@ -89,7 +86,7 @@ server {
 
 ## 使用 docker 构建镜像
 
-`docker` 的引进，很大程度地解决了部署脚本跑不了这个大BUG。**`dockerfile` 即部署脚本，部署脚本即 `dockerfile`**。也很大程度缓解了前端运维的摩擦，毕竟前端越来越靠谱了，至少部署脚本没有问题了 (笑
+`docker` 的引进，很大程度地解决了部署脚本跑不了这个大BUG。**`dockerfile` 即部署脚本，部署脚本即 `dockerfile`**。这也很大程度缓解了前端与运维的摩擦，毕竟前端越来越靠谱了，至少部署脚本没有问题了 (笑
 
 这时候，前端不再提供静态资源，而是提供服务，一个 `http` 服务
 
@@ -111,7 +108,7 @@ EXPOSE 80
 CMD http-server ./public -p 80
 ```
 
-单单有 `dockerfile` 也跑不起来，另外前端也开始维护一个 `docker-compose.yaml`，交给运维执行命令 `docker-compose up -d` 启动前端应用。前端第一次写 `dockerfile` 与 `docker-compose.yaml`，在部署流程中扮演的角色越来越重要。想着自己基础盘进一步扩大，前端不禁开心地笑了
+单单有 `dockerfile` 也跑不起来，另外前端也开始维护一个 `docker-compose.yaml`，交给运维执行命令 `docker-compose up -d` 启动前端应用。前端第一次写 `dockerfile` 与 `docker-compose.yaml`，在部署流程中扮演的角色越来越重要。想着自己基础盘进一步扩大，前端又不禁开心地笑了
 
 ``` yaml
 version: "3"
@@ -128,7 +125,7 @@ services:
 ``` nginx
 server {
   listen 80;
-  server_name shanyue.tech; 
+  server_name shanyue.tech;
 
   location / {
     proxy_pass http://static.shanyue.tech;
@@ -195,7 +192,7 @@ COPY --from=builder code/public/static /usr/share/nginx/html/static
 + `npm cache` 的基础镜像或者 `npm` 私有仓库，减少 `npm install` 时间，减小构建时间
 + `npm install --production` 只装必要的包
 
-前端看着自己优化的 `dockerfile`，想着前几天还被运维吵，说什么磁盘一半的空间都被前端的镜像给占了，想着自己节省了前端镜像几个数量级的体积，为公司好像省了不少服务器的开销，想着自己的基础盘进一步扩大，不禁开心的笑了
+前端看着自己优化的 `dockerfile`，想着前几天还被运维吵，说什么磁盘一半的空间都被前端的镜像给占了，想着自己节省了前端镜像几个数量级的体积，为公司好像省了不少服务器的开销，想着自己的基础盘进一步扩大，又不禁开心的笑了
 
 这时候再思考文章最前面两个问题
 
@@ -204,7 +201,7 @@ COPY --from=builder code/public/static /usr/share/nginx/html/static
 
 ## CI/CD 与 gitlab
 
-此时前端成就感爆棚，运维呢？运维还在一遍一遍地上线，重复着一遍又一遍的部署三个动作
+此时前端成就感爆棚，运维呢？运维还在一遍一遍地上线，重复着一遍又一遍的三个动作用来部署
 
 1. 拉代码
 1. `docker-compose up -d`
@@ -230,7 +227,7 @@ deploy:
     - shell
 ```
 
-`CI/CD` 不仅仅更解放了业务项目的部署，也在交付之前大大加强了业务代码的质量，它可以用来 `lint`，`test`，`package` 安全检查，甚至多特性多环境部署，我将会在我以后的文章将这部分事情
+`CI/CD` 不仅仅更解放了业务项目的部署，也在交付之前大大加强了业务代码的质量，它可以用来 `lint`，`test`，`package` 安全检查，甚至多特性多环境部署，我将会在我以后的文章写这部分事情
 
 我的一个服务器渲染项目 [shfshanyue/shici](https://github.com/shfshanyue/shici) 以前在我的服务器中就是以 `docker`/`docker-compose/gitlab-ci` 的方式部署，有兴趣的可以看看它的配置文件
 
@@ -332,7 +329,7 @@ ingress:
     #   initialDelaySeconds: 30
     #   timeoutSeconds: 5
     #   failureThreshold: 6
-    # 
+    #
     # readinessProbe:
     #   httpGet:
     #     path: /
@@ -363,7 +360,15 @@ ingress:
 
 ## 统一前端部署平台
 
-后来运维觉得前端应用的本质是一堆静态文件，较为单一，容易统一化，来避免各个前端镜像质量的参差不齐。于是运维准备了一个统一的 `node` 基础镜像
+后来运维觉得前端应用的本质是一堆静态文件，较为单一，容易统一化，来避免各个前端镜像质量的参差不齐。于是运维准备了一个统一的 `node` 基础镜像，做了一个前端统一部署平台，而这个平台可以做什么呢
+
+1. `CI/CD`: 当你 push 代码到仓库的特定分支会自动部署
+1. `http headers`: 你可以定制资源的 `http header`，从而可以做**缓存优化**等
+1. `http redirect/rewrite`: 如果一个 `nginx`，这样可以配置 `/api`，解决跨域问题
+1. `hostname`: 你可以设置域名
+1. `CDN`: 把你的静态资源推到 CDN
+1. `https`: 为你准备证书
+1. `Prerender`: 结合 `SPA`，做预渲染
 
 前端再也不需要构建镜像，上传 CDN 了，他只需要写一份配置文件就可以了，大致长这个样子
 
@@ -424,9 +429,3 @@ redirects:
 + [使用 k8s 部署你的第一个应用: Pod，Deployment 与 Service](https://juejin.im/post/5db8c2b46fb9a020256692dc)
 + [使用 k8s 为你的应用配置域名: Ingress](https://juejin.im/post/5db8da4b6fb9a0204520b310)
 + [使用 k8s 为你的域名加上 https](https://juejin.im/post/5db8d94be51d4529f73e2833)
-
-<hr>
-
-> 我是山月，一个喜欢跑步与爬山的程序员，我会定期分享全栈文章在个人公众号中，欢迎交流
-
-![欢迎关注公众号山月行，我会定期分享一些前后端以及运维的文章](https://shanyue.tech/qrcode.jpg)
