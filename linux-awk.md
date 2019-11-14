@@ -1,5 +1,5 @@
 ---
-title: awk 命令详解
+title: awk 命令使用及示例
 
 ---
 

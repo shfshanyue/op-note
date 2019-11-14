@@ -47,11 +47,12 @@
 1. 监控
     1. [linux 各项监控指标](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md) · [(掘金)](https://juejin.im/post/5dae57fbf265da5b5b6c7881)
     1. [linux 监控与报警]() - TODO
-1. 高频 linux 命令
+1. 高频 linux 命令关键选项及示例
     1. [sed](https://github.com/shfshanyue/op-note/blob/master/linux-sed.md) · [(掘金)](https://juejin.im/post/5db1053df265da4d57770c30)
     1. [awk](https://github.com/shfshanyue/op-note/blob/master/linux-awk.md)
     1. [jq](https://github.com/shfshanyue/op-note/blob/master/jq.md) · [(掘金)](https://juejin.im/post/5db104f7f265da4d2e121510)
     1. [iptables](https://github.com/shfshanyue/op-note/blob/master/iptables.md)
+    1. [tcpdump](https://github.com/shfshanyue/op-note/blob/master/linux-tcpdump.md)
     1. [htop](https://github.com/shfshanyue/op-note/blob/master/htop.md)
 
 ## 00 如果没有服务器 · PaaS
