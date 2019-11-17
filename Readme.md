@@ -54,7 +54,7 @@
     1. [iptables](https://github.com/shfshanyue/op-note/blob/master/iptables.md)
     1. [tcpdump](https://github.com/shfshanyue/op-note/blob/master/linux-tcpdump.md)
     1. [htop](https://github.com/shfshanyue/op-note/blob/master/htop.md)
-    1. [案例: 使用jq与sed制作掘金面试文章榜单](https://github.com/shfshanyue/op/blob/master/jq-sed-case.md)
+    1. [案例: 使用jq与sed制作掘金面试文章榜单](https://github.com/shfshanyue/op-note/blob/master/jq-sed-case.md)
 
 ## 00 如果没有服务器 · PaaS
 
@@ -140,7 +140,7 @@
 1. [jq](https://github.com/shfshanyue/op-note/blob/master/jq.md) · [(掘金)](https://juejin.im/post/5db104f7f265da4d2e121510)
 1. [iptables](https://github.com/shfshanyue/op-note/blob/master/iptables.md)
 1. [htop](https://github.com/shfshanyue/op-note/blob/master/htop.md)
-1. [案例: 使用jq与sed制作掘金面试文章榜单](https://github.com/shfshanyue/op/blob/master/jq-sed-case.md)
+1. [案例: 使用jq与sed制作掘金面试文章榜单](https://github.com/shfshanyue/op-note/blob/master/jq-sed-case.md)
 
 
 ## 关注公众号
