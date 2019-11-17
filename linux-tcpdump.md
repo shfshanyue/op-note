@@ -16,7 +16,7 @@ A: 抓包的\
 Q: 除了 `tcpdump` 还有啥能抓包\
 A: `wireshark`\
 Q: 为啥不讲 `wireshark` 抓包\
-A: `wireshark` 在 linux 上不能用\
+A: `wireshark` 在 linux 命令行上不能用
 
 <!--more-->
 

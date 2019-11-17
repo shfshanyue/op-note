@@ -1,5 +1,5 @@
 ---
-title: jq 命令使用及示例
+title: jq 命令详解及示例
 keywords: jq,json命令行工具,jq examples,json格式化工具
 description: "jq 是一款命令行的 json 处理工具。类似于 lodash 一样，它可以对 json 做各种各样的处理，如 pick，get，filter，sort，map"
 date: 2019-10-24 08:00
@@ -9,7 +9,7 @@ tags:
 
 ---
 
-# jq 命令使用及示例
+# jq 命令详解及示例
 
 `jq` 是一款命令行的 `json` 处理工具。类似于 `lodash` 一样，它可以对 `json` 做各种各样的处理: `pick`，`get`，`filter`，`sort`，`map`...
 
