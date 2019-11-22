@@ -10,15 +10,33 @@ tags:
   - devops
 ---
 
-![docker architecture](https://docs.docker.com/engine/images/architecture.svg)
-
-`docker` 使应用部署更加轻量，可移植，可扩展。更好地环境隔离也更大程度地避免了生产环境与测试环境不一致的巨大尴尬。由于 `docker` 轻便可移植的特点也极大促进了 `CI/CD` 的发展。
+`docker` 使应用部署更加轻量，可移植，可扩展。更好的环境隔离也更大程度地避免了生产环境与测试环境不一致的巨大尴尬。由于 `docker` 轻便可移植的特点也极大促进了 `CI/CD` 的发展。
 
 <!--more-->
+
++ 原文链接: [docker简易入门](https://github.com/shfshanyue/op-note/blob/master/docker.md)
++ 系列文章: [个人服务器运维指南](https://github.com/shfshanyue/op-note)
+
+## 术语
+
+`docker` 的架构图如下
+
+![docker architecture](https://docs.docker.com/engine/images/architecture.svg)
+
+从图中可以看出几个组成部分
+
++ `docker client`: 即 `docker` 命令行工具
++ `docker host`: 宿主机，`docker daemon` 的运行环境服务器
++ `docker daemon`: `docker` 的守护进程，`docker client` 通过命令行与 `docker daemon` 交互
++ `container`: 最小型的一个操作系统环境，可以对各种服务以及应用容器化
++ `image`: 镜像，可以理解为一个容器的模板配置，通过一个镜像可以启动多个容器
++ `registry`: 镜像仓库，存储大量镜像，可以从镜像仓库拉取和推送镜像
 
 ## 安装 docker
 
 > 参考在 centos 上安装 docker 的官方文档: <https://docs.docker.com/install/linux/docker-ce/centos/>
+
+以下是在 `centos` 上安装 `docker` 的命令示例过程
 
 安装依赖
 
@@ -26,7 +44,7 @@ tags:
 $ yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
-添加 `docker` 的镜像源，如果在国内，添加阿里云的镜像源
+添加 `docker` 的yum镜像源，如果在国内，添加阿里云的镜像源
 
 ``` bash
 # 安装 docker 官方的镜像源
@@ -64,11 +82,14 @@ $ docker version
 $ docker info
 ```
 
-## docker daemon
+### 守护进程配置
 
-`dockerd` 是 `docker` 的后台进程，而 `dockerd` 可以通过配置文件进行配置，在 linux 下在 `/etc/docker/daemon.json`，详细可以参考 [官方文档](https://docs.docker.com/engine/reference/commandline/dockerd/)。
+`dockerd` 是 `docker` 的守护进程，`dockerd` 可以通过配置文件进行配置，在 linux 下的配置文件位置在 `/etc/docker/daemon.json`，更详细内容可以参考 [官方文档](https://docs.docker.com/engine/reference/commandline/dockerd/)。
 
-``` shell
+日志引擎为 `json-file`，对日志结构化，结合合适的日志系统，方便定位日志。
+存储引擎为 `overrlay2`
+
+``` bash
 $ mkdir /etc/docker
 
 # 设置 docker daemon
@@ -93,7 +114,7 @@ $ systemctl restart docker
 
 ## 底层原理
 
-`docker` 底层使用了一些 `linux` 内核的特性
+`docker` 底层使用了一些 `linux` 内核的特性，大概有 `namespace`，`cgroups` 和 `ufs`
 
 ### namespace
 
@@ -149,7 +170,7 @@ centos              latest              9f38484d220f        8 months ago        
 
 但并不是所有的镜像都可以在镜像仓库中找到，另外我们也需要为我们自己的业务应用去构建镜像。
 
-使用 `docker build` 构建镜像，`docker build` 会使用当前目录的 `dockerfile` 构建镜像，至于 `dockerfile` 的配置，参考下节。
+使用 `docker build` 构建镜像，**`docker build` 会使用当前目录的 `dockerfile` 构建镜像**，至于 `dockerfile` 的配置，参考下节。
 
 `-t` 指定标签
 
@@ -180,7 +201,47 @@ CMD npm start
 
 ### FROM
 
+基于一个旧有的镜像，格式如下
+
+``` dockerfile
+FROM <image> [AS <name>]
+
+# 在多阶段构建时会用到
+FROM <image>[:<tag>] [AS <name>]
+```
+
 ### ADD
+
+把目录，或者 url 地址文件加入到镜像的文件系统中
+
+``` dockerfile
+ADD [--chown=<user>:<group>] <src>... <dest>
+```
+
+### RUN
+
+执行命令，由于 `ufs` 的文件系统，它会在当前镜像的顶层新增一层
+
+``` dockerfile
+RUN <command>
+```
+
+### CMD
+
+指定容器如何启动
+
+**一个 `Dockerfile` 中只允许有一个 CMD**
+
+``` dockerfile
+# exec form, this is the preferred form
+CMD ["executable","param1","param2"] 
+
+# as default parameters to ENTRYPOINT
+CMD ["param1","param2"]
+
+# shell form
+CMD command param1 param2
+```
 
 ## 容器
 
@@ -194,8 +255,15 @@ CMD npm start
 
 基于 `nginx` 镜像创建一个最简单的容器：启动一个最简单的 http 服务
 
+使用 `docker run` 来启动容器，`docker ps` 查看容器启动状态
+
 ``` bash
 $ docker run -d --name nginx -p 8888:80 nginx:alpine
+
+$ docker ps -l
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS              PORTS                    NAMES
+404e88f0d90c        nginx:alpine         "nginx -g 'daemon of…"   4 minutes ago       Up 4 minutes        0.0.0.0:8888->80/tcp     nginx
+CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS              PORTS                    NAMES
 ```
 
 其中:
@@ -204,6 +272,46 @@ $ docker run -d --name nginx -p 8888:80 nginx:alpine
 + `--name`: 为容器指定名称
 + `-p host-port:container-port`: 宿主机与容器端口映射，方便容器对外提供服务
 + `nginx:alpine`: 基于该镜像创建容器
+
+此时在宿主机使用 `curl` 测试容器提供的服务是否正常
+
+``` bash
+$ curl localhost:8888
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to nginx!</h1>
+<p>If you see this page, the nginx web server is successfully installed and
+working. Further configuration is required.</p>
+
+<p>For online documentation and support please refer to
+<a href="http://nginx.org/">nginx.org</a>.<br/>
+Commercial support is available at
+<a href="http://nginx.com/">nginx.com</a>.</p>
+
+<p><em>Thank you for using nginx.</em></p>
+</body>
+</html>
+```
+
+那如果要进入容器环境中呢？使用 `docker exec -it container-name` 命令
+
+``` bash
+$ docker exec -it nginx sh
+/ #
+/ #
+/ #
+```
 
 ### 容器管理
 
@@ -231,5 +339,3 @@ $ docker stats nginx
 CONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
 404e88f0d90c        nginx               0.00%               1.395MiB / 1.796GiB   0.08%               632B / 1.27kB       0B / 0B             2
 ```
-
-## 容器资源配额限制
