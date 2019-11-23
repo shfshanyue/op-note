@@ -9,6 +9,7 @@
 ## 目录
 
 1. 序
+    1. [导读](https://github.com/shfshanyue/op-note/blob/master/introduction.md)
     1. [序·当我有一台服务器时我做了什么](https://github.com/shfshanyue/op-note/blob/master/when-server.md) · [(掘金)](https://juejin.im/post/5c9232a8e51d45729b3b71e1)
     1. [序·当我有一台服务器时我做了什么(2019)]() - TODO
 1. 如果没有服务器
@@ -23,14 +24,15 @@
     1. [系统信息查看相关命令](https://github.com/shfshanyue/op-note/blob/master/system-info.md) · [(掘金)](https://juejin.im/post/5dad7681f265da5bb86ad2f5)
     1. [使用 vim 及其配置](https://github.com/shfshanyue/op-note/blob/master/vim-config.md) · [(掘金)](https://juejin.im/post/5dae491b5188251d2c4ea40d)
     1. [窗口复用与 tmux](https://github.com/shfshanyue/op-note/blob/master/tmux-config.md) · [(掘金)](https://juejin.im/post/5dafabd86fb9a04df00ef01f)
-    1. [openvpn 配置与内网安全](https://github.com/shfshanyue/op-note/blob/master/vpn-config.md) - TODO
 1. 自动化运维
-    1. [使用 ansible 做自动化运维](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md) · [(掘金)](https://juejin.im/post/5dafb50c6fb9a04e1325f2ff)
-    1. [ansible 中的细节问题](https://github.com/shfshanyue/op-note/blob/master/ansible-problem.md) - TODO
-1. docker 与应用开发
-    1. [使用 docker 高效部署前端](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
+    1. [ansible 简易入门](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md) · [(掘金)](https://juejin.im/post/5dafb50c6fb9a04e1325f2ff)
+    1. [ansible 必知必会](https://github.com/shfshanyue/op-note/blob/master/ansible-problem.md) - TODO
+1. 了解 docker 
+    1. [docker 简易入门](https://github.com/shfshanyue/op-note/blob/master/docker.md)
+    1. [使用 docker 高效部署前端应用](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
+1. 使用 docker compose 编排应用
     1. [部署异常监控服务 Sentry](https://github.com/shfshanyue/op-note/blob/master/deploy-sentry.md)
-1. k8s 与应用开发
+1. 使用 kubernetes 编排应用
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
     1. [部署你的第一个应用: Pod，Deployment 与 Service](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md) · [(掘金)](https://juejin.im/post/5db8c2b46fb9a020256692dc)
     1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md) · [(掘金)](https://juejin.im/post/5db8da4b6fb9a0204520b310)
@@ -41,7 +43,7 @@
 1. 监控
     1. [linux 各项监控指标](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md) · [(掘金)](https://juejin.im/post/5dae57fbf265da5b5b6c7881)
     1. [linux 监控与报警]() - TODO
-1. 高频 linux 命令关键选项及示例
+1. 高频 linux 命令
     1. [sed](https://github.com/shfshanyue/op-note/blob/master/linux-sed.md) · [(掘金)](https://juejin.im/post/5db1053df265da4d57770c30)
     1. [awk](https://github.com/shfshanyue/op-note/blob/master/linux-awk.md)
     1. [jq](https://github.com/shfshanyue/op-note/blob/master/jq.md) · [(掘金)](https://juejin.im/post/5db104f7f265da4d2e121510)
