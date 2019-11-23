@@ -1,5 +1,5 @@
 ---
-title: 使用 netlify 部署你的前端应用
+title: 使用 netlify 托管你的前端应用
 keywords: netlify,blog,前端应用,docker
 description: "netlify 可以为你的静态资源做托管，就是说它可以托管你的前端应用，就像 github page 那样。不过，它不又只像 github page 那么功能单一。"
 date: 2019-11-06 20:00
@@ -8,7 +8,7 @@ tags:
 
 ---
 
-# 使用 netlify 部署你的前端应用
+# 使用 netlify 托管你的前端应用
 
 我前几天写了一篇文章，[如果你想搭建一个博客](https://shanyue.tech/op/if-you-want-a-blog)，其中提到了使用 `netlify` 做博客托管服务。
 
