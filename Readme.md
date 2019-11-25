@@ -15,7 +15,8 @@
     1. [序·个人服务器开发应用架构推荐]()
 1. 如果没有服务器
     1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md) · [(掘金)](https://juejin.im/post/5db78500f265da4d0a68cef7)
-    1. [使用 netlify 托管你的前端应用](https://shanue.tech/op/deploy-fe-with-netlify)
+    1. [使用 netlify 托管博客](https://github.com/shfshanyue/op-note/blob/master/github-fe-with-netlify.md)
+    1. [使用 github action 自动部署博客](https://github.com/shfshanyue/op-note/blob/master/github-action-guide.md)
     1. [免费的 API Server 与数据存储]() - TODO
     1. [申请你的域名邮箱]() - TODO
     1. [使用 sentry 做异常监控]() - TODO
