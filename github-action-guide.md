@@ -219,9 +219,11 @@ jobs:
 
 更多 `context` 信息可以参考官方文档 [Contexts and expression syntax for GitHub Actions](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/contexts-and-expression-syntax-for-github-actions#job-context)
 
-## 实践自动部署
+## 自动部署实践
 
 我的博客目前托管在阿里云OSS上，以下 `action.yaml` 描述了自动部署的流程。可以参考我的配置 [shfshanyue/blog](https://github.com/shfshanyue/blog/blob/master/.github/workflows/nodejs.yml)
+
+关于托管在阿里云OSS的细节，可以参考 [在阿里云OSS托管你的前端应用](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-alioss.md)
 
 ``` yaml
 name: deploy to aliyun oss

@@ -2,6 +2,7 @@
 title: 使用免费服务搭建一个博客
 keywords: github page,netlify,hugo,hexo,vuepress,搭建博客,使用netlify搭建博客
 description: 如果你只想搭建一个博客，那么你很可能不需要一个服务器
+thumbnail: https://raw.githubusercontent.com/shfshanyue/graph/master/draw/blog-arch-blog.jpg
 date: 2019-10-28 20:00
 tags:
   - devops
@@ -40,6 +41,15 @@ tags:
 + 原文链接: [如果你想搭建一个博客](https://shanyue.tech/op/if-you-want-a-blog)
 + 系列文章: [个人服务器运维指南](https://shanyue.tech/op)
 
+## 00 架构
+
+根据你的域名有没有备案以及对网络时延的要求，可以选择以下两种方案
+
+1. `react/vue/angular` + `github` + `netlify` + `cloudflare`，适合域名没有进行备案且主要服务于国外的同学
+1. `react/vue/angular` + `github` + `github actions` + `alioss` + `alicdn`，适合域名在国内进行备案的同学
+
+![如何搭建个人博客](https://raw.githubusercontent.com/shfshanyue/graph/master/draw/blog-arch-blog.jpg)
+
 ## 01 选择一款静态网站生成器
 
 动态博客应用状态过重，复杂性过高，不便于部署与迁移。无状态的静态博客是一个不错的选择。
@@ -51,6 +61,7 @@ tags:
 + [hugo](https://github.com/gohugoio/hugo): github star 39k。使用 go 开发，是我用过的构建最快的生成器，它的简介也只有一句话: `The world’s fastest framework for building websites.`，不过我自我感觉它的主题样式略少。如果你想定制，那你需要对 `go` 语言的 `template` 有些了解。
 + [hexo](https://github.com/hexojs/hexo): github star 28.4k。使用 node 开发，主题样式多，我还是较为喜欢这一点。
 + [vuepress](https://github.com/vuejs/vuepress): github star 14.5k。使用 vue 开发，一般用作文档较多。从我的博客风格就可以看出来，它使用 `vuepress` 构建。
++ [gatsby](https://github.com/gatsbyjs/gatsby): github star 41 k。使用 React 开发，可定制性强。`React` 的官网就是使用 `gatsby` 开发
 
 ## 02 如何部署
 
