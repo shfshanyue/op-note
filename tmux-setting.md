@@ -1,5 +1,5 @@
 ---
-title: 多窗口管理与tmux的安装，配置以及使用
+title: 终端复用神器 tmux 简介配置及高频操作
 keywords: linux,tmux,ansible,centos中安装tmux,linux多窗口管理,终端复用,安装tmux,ansible安装tmux
 description: tmux 是一个终端复用器，这也是它命名的由来 t(terminal) mux(multiplexer)，你可以在一个屏幕上管理多个终端！
 date: 2019-10-23 20:00
@@ -40,7 +40,6 @@ tags:
 至于说它高颜值，体现在可定制化样式的状态栏下，可以设置状态栏的样式, 位置，当前window的样式，状态栏信息的丰富度。比如 [gpakosz/.tmux](https://github.com/gpakosz/.tmux) 的配置
 
 ![tmux](https://cloud.githubusercontent.com/assets/553208/9890797/8dffe542-5c02-11e5-9c06-a25b452e6fcc.gif)
-
 
 <!--more-->
 

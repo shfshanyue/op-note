@@ -2,6 +2,9 @@
 title: ansible 自动化运维指南
 keywords: linux,ansible,自动化运维,ansible安装
 desription: 使用 ansible 可以进行批量配置，批量安装软件，省了一大部分繁琐的重复工作，提高了管理服务器的效率。本章介绍如何使用 ansible 的安装以及关于 ansible 的基本功能。建议拥有云服务器的同学都可以学习一下 ansible
+recommend:
+  - 对ansible各个组件进行简单介绍，通俗易懂
+  - 一个小的实例讲解如何使用ansible做自动化运维
 date: 2019-10-23 22:00
 tags:
   - devops
@@ -9,20 +12,20 @@ tags:
 
 ---
 
-# 使用 ansible 做自动化运维
+# ansible 简易入门
 
 使用 ansible 可以进行批量配置，批量安装软件，省了一大部分繁琐的重复工作，提高了管理服务器的效率。
 
-本章介绍如何使用 `ansible` 的安装以及关于 ansible 的基本功能。建议拥有云服务器的同学都可以学习一下 `ansible`
+本章介绍如何使用 `ansible` 的安装以及关于 `ansible` 的基本功能。建议拥有云服务器的同学都可以学习一下 `ansible`
 
 <!--more-->
 
-+ 原文链接: [使用 ansible 做自动化运维](https://shanyue.tech/op/ansible-guide) · [github](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md)
-+ 系列文章: [服务器运维笔记](https://shanyue.tech/op) · [github](https://github.com/shfshanyue/op-note)
++ 原文链接: [使用 ansible 做自动化运维](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md)
++ 系列文章: [服务器运维笔记](https://github.com/shfshanyue/op-note)
 
 ## 自动化运维的必要性
 
-我现在有两个云服务器用来瞎折腾，装的都是 centos 系统。而我在两个服务器上都会装上 `tmux`，用作多窗口管理。
+我现在有两个云服务器用来瞎折腾，装的都是 centos 系统。而我在两个服务器上都会装上 `tmux`，用作多窗口管理工具。
 
 但在有了服务器的早期有可能各种乱折腾，又需要多次重装系统，而每次重装系统，又需要重装一遍 `tmux`。
 
