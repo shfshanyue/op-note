@@ -37,6 +37,8 @@
 1. 使用 docker compose 编排应用
     1. [docker-compose 简易入门]() - TODO
     1. [docker-compose 架构简介]() - TODO
+    1. [使用 traefik 做反向代理]() - TODO
+    1. [使用 traefik 自动生成 https 的证书]() - TODO
     1. [部署异常监控服务 Sentry](https://github.com/shfshanyue/op-note/blob/master/deploy-sentry.md)
 1. 使用 kubernetes 编排应用
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
