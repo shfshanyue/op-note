@@ -9,16 +9,15 @@ tags:
   - devops
 ---
 
-`traefik` 与 `nginx` 一样，是一款优秀的反向代理工具，或者叫 `edge router`。至于使用它的原因则基于以下几点
+`traefik` 与 `nginx` 一样，是一款优秀的反向代理工具，或者叫 `Edge Router`。至于使用它的原因则基于以下几点
 
-+ 无须重启即可更新配置！
++ 无须重启即可更新配置
 + 自动的服务发现与负载均衡
 + 与 `docker` 的完美集成，基于 `container label` 的配置
-+ `metrics` 的支持，对 `prometheus` 和 `k8s` 的集成
 + 漂亮的 `dashboard` 界面
-+ 尝试一下...
++ `metrics` 的支持，对 `prometheus` 和 `k8s` 的集成
 
-接下来讲一下它的安装，基本功能以及配置。本篇文章的 `traefik` 的版本号是 `v2.0.6`
+接下来讲一下它的安装，基本功能以及配置。`traefik` 在 `v1` 与 `v2` 版本间差异过大，本篇文章采用了 `v2`
 
 <!--more-->
 
@@ -67,7 +66,7 @@ networks:
 那 `whoami` 这个 `http` 服务做了什么事情呢
 
 1. 暴露了一个 `http` 服务，主要提供一些 `header` 以及 `ip` 信息
-1. 设置了 `labels`，设置该服务的 `Host` 为 `whoami.docker.localhost`，给 `traefik` 提供标记
+1. 配置了容器的 `labels`，设置该服务的 `Host` 为 `whoami.docker.localhost`，给 `traefik` 提供标记
 
 此时我们可以通过主机名 `whoami.docker.localhost` 来访问 `whoami` 服务，我们使用 `curl` 做测试
 
@@ -94,11 +93,39 @@ X-Real-Ip: 127.0.0.1
 
 ## 配置文件
 
-使用 `./traefik --configFile=traefik.toml` 可以读取配置文件 `traefik.toml`。
+![](https://docs.traefik.io/assets/img/static-dynamic-configuration.png)
+
+`traefik` 一般需要一个配置文件来管理路由，服务，证书等。我们可以通过 `docker` 启动 `traefik` 时来挂载配置文件，`docker-compose.yaml` 文件如下
+
+``` yaml
+version: '3'
+
+services:
+  traefik:
+    image: traefik:v2.0
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - ./traefik.toml:/etc/traefik/traefik.toml
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - "traefik.http.routers.api.rule=Host(`traefik..com`)"
+```
 
 基本配置文件可以通过 [traefik.sample.toml](https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml) 获取
 
 一个简单的配置文件及释义如下
+
+### docker
+
+``` toml
+[providers.docker]
+  endpoint = "unix:///var/run/docker.sock"
+  defaultRule = "Host(`{{ normalize .Name }}.shanyue.local`)"
+```
+
+如果没有配置 `Rule`，将默认通过 `<container-name>.shanyue.local` 来发现路由
 
 ### 日志
 
@@ -135,8 +162,118 @@ format = "json"
 
 [Prometheus](https://prometheus.io/) 作为时序数据库，可以用来监控 traefik 的日志，支持更加灵活的查询，报警以及可视化。traefik 默认设置 prometheus 作为日志收集工具。另外可以使用 `grafana` 做为 `prometheus` 的可视化工具。
 
-## Docker provider
+## Docker Provider，Router and Service
 
-traefik 会监听 `docker.sock`，根据容器的 `label` 进行配置。
+![traefik architecture](https://docs.traefik.io/assets/img/architecture-overview.png)
 
-## File provider
++ `Providers` 服务提供者，如 docker，如一个 http service
++ `Routers` 分析请求的 `Host`，`Header` 或者 `Path` 
++ `Services` 选择合适的 `Provider` (负载均衡等)
+
+我们使用 `Docker` 作为 `Provider`，而 `Router` 与 `Service` 可以通过 `container labels` 来进行配置，我们一般使用 `docker-compose.yaml` 中的 `labels` 来配置
+
+我们可以通过 `traefik.http.routers.<container-name>.rule` 来配置路由规则，类似与 `nginx` 中的 `location`
+
+``` yaml
+labels:
+  - "traefik.http.routers.blog.rule=Host(`traefik.io`) || (Host(`containo.us`) && Path(`/traefik`))"
+```
+
+### 负载均衡
+
+如果要为 `docker provider` 进行负载均衡怎么办?
+
+只需要使用 `docker-compose up --scale` 对容器横向扩容即可完成
+
+``` bash
+$ docker-compose up --scale whoami=3
+WARNING: The scale command is deprecated. Use the up command with the --scale flag instead.
+Starting whoami_whoami_1 ... done
+Creating whoami_whoami_2 ... done
+Creating whoami_whoami_3 ... done
+```
+
+在 `traefik dashboard` 中查看该 `service`时，已负载到三个容器
+
+![](./assets/traefik-lb.png)
+
+## Traefik Dashboard
+
+`traefik` 默认有一个 `dashboard`，通过 `:8080` 端口暴露出去。我们可以在浏览器中直接通过 `<IP>:8080` 访问，但是
+
+1. 使用 `IP` 地址肯定不是特别方便，此时我们可以配置 `Host`
+1. 在公网环境下访问有安全性问题，此时可以配置 `basicAuth`，`digestAuth`，`IpWhiteList` 或者 `openVPN`
+
+再次更改 `traefik` 的 `docker-compose.yaml` 文件如下：
+
+``` yaml
+version: '3'
+
+services:
+  reverse-proxy:
+    image: traefik:v2.0
+    restart: always
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - ./traefik.toml:/etc/traefik/traefik.toml
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: traefik
+    labels:
+      - "traefik.http.routers.api.rule=Host(`traefik.shanyue.local`)"
+      - "traefik.http.routers.api.service=api@internal"
+```
+
+此时可以通过 `traefik.shanyue.local` 来访问 `dashboard`
+
+> Q: 我们如何配置 DNS 服务器来使得 `traefik.shanyue.local` 可供集群内部使用
+
+## 总结
+
+使用 `docker-compose.yaml` 部署 `traefik`，部署文件文件如下
+
+``` yaml
+version: '3'
+
+services:
+  reverse-proxy:
+    image: traefik:v2.0
+    restart: always
+    ports:
+      - "80:80"
+      - "8080:8080"
+    volumes:
+      - ./traefik.toml:/etc/traefik/traefik.toml
+      - /var/run/docker.sock:/var/run/docker.sock
+    container_name: traefik
+    labels:
+      - "traefik.http.routers.api.rule=Host(`traefik.shanyue.local`)"
+      - "traefik.http.routers.api.service=api@internal"
+```
+
+`traefik` 的配置文件可以通过 [traefik.sample.toml](https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml) 获取
+
+当使用 `docker` 部署完成 `traefik` 并且配置好配置文件后。如果想要使用 `docker-compose` 部署一个新的应用时只需要
+
+1. 添加几行 `container labels`
+1. 添加 `traefik` 容器所使用的网络
+
+``` yaml
+version: '3'
+
+services:
+  # 该镜像会暴露出自身的 `header` 信息
+  whoami:
+    image: containous/whoami
+    restart: always
+    labels:
+      # 设置Host 为 whoami.docker.localhost 进行域名访问
+      - "traefik.http.routers.whoami.rule=Host(`whoami.docker.localhost`)"
+
+# 使用已存在的 traefik 的 network
+networks:
+  default:
+    external:
+      name: traefik_default
+```
