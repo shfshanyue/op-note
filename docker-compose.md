@@ -34,6 +34,11 @@ CONTAINER ID        IMAGE                COMMAND                  CREATED       
 
 **使用 `docker-compose` 来编排应用**
 
+<!--more-->
+
++ 原文链接: [docker compose 简易入门](https://github.com/shfshanyue/op-note/blob/master/docker-compose.md)
++ 系列文章: [个人服务器运维指南](https://github.com/shfshanyue/op-note)
+
 ## 快速开始
 
 使用 `docker-compose` 创建一个最简单的容器，创建 `docker-compose.yaml` 文件。它使用配置文件的方式代替以前传参数的方式启动容器
@@ -137,3 +142,7 @@ labels:
 ### container_name
 
 指定容器名称，但是指定后不能够横向扩展，往往不会用到
+
+## 容器管理
+
+当使用 `docker-compose` 编排应用时，同时也可以选择 `ctop` 来管理容器。
