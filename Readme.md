@@ -12,15 +12,12 @@
     1. [导读](https://github.com/shfshanyue/op-note/blob/master/introduction.md)
     1. [序·当我有一台服务器时我做了什么](https://github.com/shfshanyue/op-note/blob/master/when-server.md)
     1. [序·当我有一台服务器时我做了什么(2019)]() - TODO
-    1. [序·个人服务器开发应用架构推荐]() - TODO
+    1. [序·个人服务器应用开发架构推荐]() - TODO
 1. 如果你只想搭建博客
     1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md)
     1. [使用 netlify 托管博客与持续集成](https://github.com/shfshanyue/op-note/blob/master/github-fe-with-netlify.md)
     1. [使用 alioss 托管博客](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-alioss.md)
     1. [使用 github action 持续集成](https://github.com/shfshanyue/op-note/blob/master/github-action-guide.md)
-    1. [免费的 API Server 与数据存储]() - TODO
-    1. [申请你的域名邮箱]() - TODO
-    1. [使用 sentry 做异常监控]() - TODO
 1. 服务器初始化配置
     1. [服务器初始登录：ssh-config](https://github.com/shfshanyue/op-note/blob/master/init.md)
     1. [服务器ssh key 以及 git 配置](https://github.com/shfshanyue/op-note/blob/master/ssh-setting.md)
@@ -32,14 +29,14 @@
     1. [ansible 必知必会](https://github.com/shfshanyue/op-note/blob/master/ansible-problem.md) - TODO
 1. 了解 docker 
     1. [docker 简易入门](https://github.com/shfshanyue/op-note/blob/master/docker.md)
-    1. [dockerfile 最佳实践]() - TODO
+    1. [Dockerfile 最佳实践](https://github.com/shfshanyue/op-note/blob/master/dockerfile-practice.md)
     1. [使用 docker 高效部署前端应用](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
 1. 使用 docker compose 编排应用
-    1. [docker-compose 简易入门]() - TODO
-    1. [docker-compose 架构简介]() - TODO
-    1. [使用 traefik 做反向代理]() - TODO
+    1. [简介](https://github.com/shfshanyue/op-note/blob/master/docker-compose-arch.md)
+    1. [docker-compose 简易入门](https://github.com/shfshanyue/op-note/blob/master/docker-compose.md)
+    1. [使用 traefik 做反向代理](https://github.com/shfshanyue/op-note/blob/master/traefik.md)
     1. [使用 traefik 自动生成 https 的证书]() - TODO
-    1. [部署异常监控服务 Sentry](https://github.com/shfshanyue/op-note/blob/master/deploy-sentry.md)
+    1. [异常监控服务 Sentry 部署](https://github.com/shfshanyue/op-note/blob/master/deploy-sentry.md)
 1. 使用 kubernetes 编排应用
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
     1. [部署你的第一个应用](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md)
@@ -56,7 +53,7 @@
     1. [awk 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/linux-awk.md)
     1. [jq 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/jq.md)
     1. [iptables 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/iptables.md) - TODO
-    1. [tcpdump 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/linux-tcpdump.md) - TODO
+    1. [tcpdump 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/linux-tcpdump.md)
     1. [htop 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/htop.md) - TODO
     1. [案例: 使用jq与sed制作掘金面试文章榜单](https://github.com/shfshanyue/op-note/blob/master/jq-sed-case.md)
 

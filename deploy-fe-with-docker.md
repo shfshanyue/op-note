@@ -4,10 +4,7 @@ description: docker 变得越来越流行，它可以轻便灵活地隔离环境
 keywords: docker,前端,使用docker部署前端,优化dockerfile
 date: 2019-03-09
 hot: 11
-tags:
-  - docker
-  - javascript
-  - devops
+tags: docker,devops,前端部署
 categories:
   - 前端
   - 运维
@@ -39,7 +36,7 @@ docker 变得越来越流行，它可以轻便灵活地隔离环境，进行扩�
 介绍完部署流程后，简单写一个 Dockerfile
 
 ``` docker
-FROM node:alpine
+FROM node:10-alpine
 
 # 代表生产环境
 ENV PROJECT_ENV production
@@ -74,7 +71,7 @@ CMD http-server ./public -p 80
 > 关于两者的区别可以参考文档: https://docs.npmjs.com/files/package.json.html#dependencies
 
 ``` docker
-FROM node:alpine
+FROM node:10-alpine
 
 ENV PROJECT_ENV production
 ENV NODE_ENV production
@@ -95,7 +92,7 @@ CMD http-server ./public -p 80
 对于 `ADD` 来讲，如果需要添加的内容没有发生变化，则可以利用缓存。把 package.json 与源文件分隔开写入镜像是一个很好的选择。目前，如果没有新的安装包更新的话，可以节省一半时间
 
 ``` docker
-FROM node:alpine
+FROM node:10-alpine
 
 ENV PROJECT_ENV production
 ENV NODE_ENV production
@@ -144,7 +141,7 @@ CMD http-server ./public -p 80
 > 参考官方文档 https://docs.docker.com/develop/develop-images/multistage-build/
 
 ``` docker
-FROM node:alpine as builder
+FROM node:10-alpine as builder
 
 ENV PROJECT_ENV production
 ENV NODE_ENV production
@@ -159,7 +156,7 @@ ADD . /code
 RUN npm run build
 
 # 选择更小体积的基础镜像
-FROM nginx:alpine
+FROM nginx:10-alpine
 COPY --from=builder /code/public /usr/share/nginx/html
 ```
 
@@ -167,7 +164,7 @@ COPY --from=builder /code/public /usr/share/nginx/html
 
 ## 使用 CDN
 
-分析一下 50M+ 的镜像体积，nginx:alpine 的镜像是16M，剩下的40M是静态资源。
+分析一下 50M+ 的镜像体积，`nginx:10-alpine` 的镜像是16M，剩下的40M是静态资源。
 
 **如果把静态资源给上传到 CDN，则没有必要打入镜像了**，此时镜像大小会控制在 20M 以下
 
@@ -177,7 +174,7 @@ COPY --from=builder /code/public /usr/share/nginx/html
 + /build，此类文件需要 require 引用，会被 webpack 打包并加 hash 值，并通过 publicPath 修改资源地址。可以把此类文件上传至 cdn，并加上永久缓存，不需要打入镜像
 
 ``` docker
-FROM node:alpine as builder
+FROM node:10-alpine as builder
 
 ENV PROJECT_ENV production
 ENV NODE_ENV production
@@ -194,7 +191,7 @@ ADD . /code
 RUN npm run build && npm run uploadCdn
 
 # 选择更小体积的基础镜像
-FROM nginx:alpine
+FROM nginx:10-alpine
 COPY --from=builder code/public/index.html code/public/favicon.ico /usr/share/nginx/html/
 COPY --from=builder code/public/static /usr/share/nginx/html/static
 ```
