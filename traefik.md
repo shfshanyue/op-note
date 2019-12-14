@@ -198,8 +198,6 @@ Creating whoami_whoami_3 ... done
 
 在 `traefik dashboard` 中查看该 `service`时，已负载到三个容器
 
-![](./assets/traefik-lb.png)
-
 ## Traefik Dashboard
 
 `traefik` 默认有一个 `dashboard`，通过 `:8080` 端口暴露出去。我们可以在浏览器中直接通过 `<IP>:8080` 访问，但是
@@ -280,3 +278,7 @@ networks:
     external:
       name: traefik_default
 ```
+
+## 下一步
+
+当我们访问集群内部服务，如数据库，缓存，`traefik Dashboard`，`gitlab` 时，如果直接暴露在公网中，则会造成很大安全隐患，此时我们应该如何处理呢？

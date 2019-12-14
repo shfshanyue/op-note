@@ -9,53 +9,53 @@
 ## 目录
 
 1. 序
-    1. [导读](https://github.com/shfshanyue/op-note/blob/master/introduction.md)
-    1. [序·当我有一台服务器时我做了什么](https://github.com/shfshanyue/op-note/blob/master/when-server.md)
+    1. [导读](https://shanyue.tech/op/introduction.html)
+    1. [序·当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server.html)
     1. [序·当我有一台服务器时我做了什么(2019)]() - TODO
     1. [序·个人服务器应用开发架构推荐]() - TODO
 1. 如果你只想搭建博客
-    1. [如果你只想搭一个博客](https://github.com/shfshanyue/op-note/blob/master/if-you-want-a-blog.md)
-    1. [使用 netlify 托管博客与持续集成](https://github.com/shfshanyue/op-note/blob/master/github-fe-with-netlify.md)
-    1. [使用 alioss 托管博客](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-alioss.md)
-    1. [使用 github action 持续集成](https://github.com/shfshanyue/op-note/blob/master/github-action-guide.md)
+    1. [如果你只想搭一个博客](https://shanyue.tech/op/if-you-want-a-blog.html)
+    1. [使用 netlify 托管博客与持续集成](https://shanyue.tech/op/github-fe-with-netlify.html)
+    1. [使用 alioss 托管博客](https://shanyue.tech/op/deploy-fe-with-alioss.html)
+    1. [使用 github action 持续集成](https://shanyue.tech/op/github-action-guide.html)
 1. 服务器初始化配置
-    1. [服务器初始登录：ssh-config](https://github.com/shfshanyue/op-note/blob/master/init.md)
-    1. [服务器ssh key 以及 git 配置](https://github.com/shfshanyue/op-note/blob/master/ssh-setting.md)
-    1. [系统信息查看相关命令](https://github.com/shfshanyue/op-note/blob/master/system-info.md)
-    1. [vim 基本操作及其配置](https://github.com/shfshanyue/op-note/blob/master/vim-setting.md)
-    1. [tmux 安装，基本操作及其配置](https://github.com/shfshanyue/op-note/blob/master/tmux-vim-setting.md)
+    1. [服务器初始登录：ssh-config](https://shanyue.tech/op/init.html)
+    1. [服务器ssh key 以及 git 配置](https://shanyue.tech/op/ssh-setting.html)
+    1. [系统信息查看相关命令](https://shanyue.tech/op/system-info.html)
+    1. [vim 基本操作及其配置](https://shanyue.tech/op/vim-setting.html)
+    1. [tmux 安装，基本操作及其配置](https://shanyue.tech/op/tmux-vim-setting.html)
 1. 自动化运维
-    1. [ansible 简易入门](https://github.com/shfshanyue/op-note/blob/master/ansible-guide.md)
-    1. [ansible 必知必会](https://github.com/shfshanyue/op-note/blob/master/ansible-problem.md) - TODO
+    1. [ansible 简易入门](https://shanyue.tech/op/ansible-guide.html)
+    1. [ansible 必知必会](https://shanyue.tech/op/ansible-problem.html) - TODO
 1. 了解 docker 
-    1. [docker 简易入门](https://github.com/shfshanyue/op-note/blob/master/docker.md)
-    1. [Dockerfile 最佳实践](https://github.com/shfshanyue/op-note/blob/master/dockerfile-practice.md)
-    1. [使用 docker 高效部署前端应用](https://github.com/shfshanyue/op-note/blob/master/deploy-fe-with-docker.md)
+    1. [docker 简易入门](https://shanyue.tech/op/docker.html)
+    1. [Dockerfile 最佳实践](https://shanyue.tech/op/dockerfile-practice.html)
+    1. [使用 docker 高效部署前端应用](https://shanyue.tech/op/deploy-fe-with-docker.html)
 1. 使用 docker compose 编排应用
-    1. [简介](https://github.com/shfshanyue/op-note/blob/master/docker-compose-arch.md)
-    1. [docker-compose 简易入门](https://github.com/shfshanyue/op-note/blob/master/docker-compose.md)
-    1. [使用 traefik 做反向代理](https://github.com/shfshanyue/op-note/blob/master/traefik.md)
+    1. [简介](https://shanyue.tech/op/docker-compose-arch.html)
+    1. [docker-compose 简易入门](https://shanyue.tech/op/docker-compose.html)
+    1. [使用 traefik 做反向代理](https://shanyue.tech/op/traefik.html)
     1. [使用 traefik 自动生成 https 的证书]() - TODO
-    1. [异常监控服务 Sentry 部署](https://github.com/shfshanyue/op-note/blob/master/deploy-sentry.md)
+    1. [异常监控服务 Sentry 部署](https://shanyue.tech/op/deploy-sentry.html)
 1. 使用 kubernetes 编排应用
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
-    1. [部署你的第一个应用](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md)
-    1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md)
-    1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.md)
-    1. [Helm 安装及简介](https://github.com/shfshanyue/learn-k8s/blob/master/helm.md)
-    1. [持续集成 drone.ci 简介及部署](https://github.com/shfshanyue/op-note/blob/master/deploy-drone.md)
-    1. [前端部署发展史](https://github.com/shfshanyue/op-note/blob/master/deploy-fe.md)
+    1. [部署你的第一个应用](https://github.com/shfshanyue/learn-k8s/blob/master/pod.html)
+    1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.html)
+    1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.html)
+    1. [Helm 安装及简介](https://github.com/shfshanyue/learn-k8s/blob/master/helm.html)
+    1. [持续集成 drone.ci 简介及部署](https://shanyue.tech/op/deploy-drone.html)
+    1. [前端部署发展史](https://shanyue.tech/op/deploy-fe.html)
 1. 监控
-    1. [linux 各项监控指标](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md)
+    1. [linux 各项监控指标](https://shanyue.tech/op/linux-monitor.html)
     1. [linux 监控与报警]() - TODO
 1. 高频 linux 命令
-    1. [sed 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/linux-sed.md)
-    1. [awk 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/linux-awk.md)
-    1. [jq 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/jq.md)
-    1. [iptables 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/iptables.md) - TODO
-    1. [tcpdump 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/linux-tcpdump.md)
-    1. [htop 命令详解及示例](https://github.com/shfshanyue/op-note/blob/master/htop.md) - TODO
-    1. [案例: 使用jq与sed制作掘金面试文章榜单](https://github.com/shfshanyue/op-note/blob/master/jq-sed-case.md)
+    1. [sed 命令详解及示例](https://shanyue.tech/op/linux-sed.html)
+    1. [awk 命令详解及示例](https://shanyue.tech/op/linux-awk.html)
+    1. [jq 命令详解及示例](https://shanyue.tech/op/jq.html)
+    1. [iptables 命令详解及示例](https://shanyue.tech/op/iptables.html) - TODO
+    1. [tcpdump 命令详解及示例](https://shanyue.tech/op/linux-tcpdump.html)
+    1. [htop 命令详解及示例](https://shanyue.tech/op/htop.html) - TODO
+    1. [案例: 使用jq与sed制作掘金面试文章榜单](https://shanyue.tech/op/jq-sed-case.html)
 
 ## 关注我
 
