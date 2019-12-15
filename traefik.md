@@ -9,6 +9,8 @@ tags:
   - devops
 ---
 
+# Traefik 简易入门
+
 `traefik` 与 `nginx` 一样，是一款优秀的反向代理工具，或者叫 `Edge Router`。至于使用它的原因则基于以下几点
 
 + 无须重启即可更新配置

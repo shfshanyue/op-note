@@ -57,9 +57,9 @@ CMD http-server ./public -p 80
 
 一般情况下，以下就成了运维的工作了，不过，拓展自己的知识边界总是没错的。其它阶段介绍如下
 
-+ 使用 `nginx` 或者 `traefik` 做反向代理
-+ 使用 `kubernetes` 或者 `docker compose` 做容器编排
-+ 使用 `gitlab ci`，`drone ci` 或者 `github actions` 等做 CI/CD
++ 使用 `nginx` 或者 `traefik` 做反向代理。在我内部集群中使用了 `traefik`，详见 [traefik 简易入门](https://github.com/shfshanyue/op-note/blob/master/traefik.md)
++ 使用 `kubernetes` 或者 `docker compose` 做容器编排。在我内部集群中使用了 `compose`，详见 [docker compose 简易入门](https://github.com/shfshanyue/op-note/blob/master/traefik-compose.md)
++ 使用 `gitlab ci`，`drone ci` 或者 `github actions` 等做 CI/CD。在我内部集群中使用了 `github actions`，详见 [github actions 简易入门](https://github.com/shfshanyue/op-note/blob/master/github-action-guide.md)
 
 这时镜像存在两个问题，导致每次部署时间过长，不利于产品的快速交付，没有快速交付，也就没有敏捷开发 (Agile)
 
@@ -189,8 +189,8 @@ RUN npm install --production
 
 ADD . /code
 
-# npm run uploadCdn 是把静态资源上传至 cdn 上的脚本文件
-RUN npm run build && npm run uploadCdn
+# npm run uploadOss 是把静态资源上传至 oss 上的脚本文件
+RUN npm run build && npm run uploadOss
 
 # 选择更小体积的基础镜像
 FROM nginx:10-alpine

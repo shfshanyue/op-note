@@ -75,7 +75,7 @@ $ docker-compose rm
 
 关于 `compose` 的所有的配置请参考官方文档 [compose file](https://docs.docker.com/compose/compose-file/)，大部分配置与 `dockerfile` 配置相类似
 
-配置文件管理三种资源，`services`，`networks` 以及 `volumes`，我们可以结合 `docker-compose` 与 `traefik` 来管理应用。如以下配置文件将可以以域名 `whiami.docker.localhost` 来访问应用，详情可参考 [traefik 简单介绍](https://github.com/shfshanyue/op-note/blob/master/traefik.md)
+配置文件管理三种资源，`services`，`networks` 以及 `volumes`，我们可以结合 `docker-compose` 与 `traefik` 来管理应用。如以下配置文件将可以以域名 `whiami.docker.localhost` 来访问应用，详情可参考 [traefik 简易入门](https://github.com/shfshanyue/op-note/blob/master/traefik.md)
 
 ``` yaml
 version: '3'

@@ -22,32 +22,33 @@
     1. [服务器初始登录：ssh-config](https://shanyue.tech/op/init.html)
     1. [服务器ssh key 以及 git 配置](https://shanyue.tech/op/ssh-setting.html)
     1. [系统信息查看相关命令](https://shanyue.tech/op/system-info.html)
-    1. [vim 基本操作及其配置](https://shanyue.tech/op/vim-setting.html)
-    1. [tmux 安装，基本操作及其配置](https://shanyue.tech/op/tmux-vim-setting.html)
+    1. [vim 基本操作及配置](https://shanyue.tech/op/vim-setting.html)
+    1. [tmux 与窗口管理](https://shanyue.tech/op/tmux-vim-setting.html)
 1. 自动化运维
     1. [ansible 简易入门](https://shanyue.tech/op/ansible-guide.html)
     1. [ansible 必知必会](https://shanyue.tech/op/ansible-problem.html) - TODO
 1. 了解 docker 
     1. [docker 简易入门](https://shanyue.tech/op/docker.html)
     1. [Dockerfile 最佳实践](https://shanyue.tech/op/dockerfile-practice.html)
-    1. [使用 docker 高效部署前端应用](https://shanyue.tech/op/deploy-fe-with-docker.html)
-1. 使用 docker compose 编排应用
-    1. [简介](https://shanyue.tech/op/docker-compose-arch.html)
+    1. [案例: 使用 docker 高效部署前端应用](https://shanyue.tech/op/deploy-fe-with-docker.html)
+1. 使用 docker compose 编排容器
+    1. [compose 编排架构简介](https://shanyue.tech/op/docker-compose-arch.html)
     1. [docker-compose 简易入门](https://shanyue.tech/op/docker-compose.html)
     1. [使用 traefik 做反向代理](https://shanyue.tech/op/traefik.html)
     1. [使用 traefik 自动生成 https 的证书]() - TODO
-    1. [异常监控服务 Sentry 部署](https://shanyue.tech/op/deploy-sentry.html)
-1. 使用 kubernetes 编排应用
+    1. [使用 openvpn 访问内部集群私有服务](https://shanyue.tech/op/openvpn.html)
+    1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)
+1. 使用 kubernetes 编排容器
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
     1. [部署你的第一个应用](https://github.com/shfshanyue/learn-k8s/blob/master/pod.html)
     1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.html)
     1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.html)
     1. [Helm 安装及简介](https://github.com/shfshanyue/learn-k8s/blob/master/helm.html)
     1. [持续集成 drone.ci 简介及部署](https://shanyue.tech/op/deploy-drone.html)
-    1. [前端部署发展史](https://shanyue.tech/op/deploy-fe.html)
+    1. [案例：前端部署发展史](https://shanyue.tech/op/deploy-fe.html)
 1. 监控
     1. [linux 各项监控指标](https://shanyue.tech/op/linux-monitor.html)
-    1. [linux 监控与报警]() - TODO
+    1. [使用 ctop 监控容器指标]() - TODO
 1. 高频 linux 命令
     1. [sed 命令详解及示例](https://shanyue.tech/op/linux-sed.html)
     1. [awk 命令详解及示例](https://shanyue.tech/op/linux-awk.html)
