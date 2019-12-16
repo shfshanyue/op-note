@@ -130,7 +130,7 @@ services:
   defaultRule = "Host(`{{ normalize .Name }}.shanyue.local`)"
 ```
 
-如果没有配置 `Rule`，将默认通过 `<container-name>.shanyue.local` 来发现路由
+如果没有配置 `Rule`，将默认通过 `<Name>.shanyue.local` 的形式发现路由
 
 ### 日志
 

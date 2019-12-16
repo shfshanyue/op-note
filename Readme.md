@@ -37,18 +37,20 @@
     1. [使用 traefik 做反向代理](https://shanyue.tech/op/traefik.html)
     1. [使用 traefik 自动生成 https 的证书]() - TODO
     1. [使用 openvpn 访问内部集群私有服务](https://shanyue.tech/op/openvpn.html)
+    1. [使用 postgres 与 redis 做数据存储服务]()
     1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)
 1. 使用 kubernetes 编排容器
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
-    1. [部署你的第一个应用](https://github.com/shfshanyue/learn-k8s/blob/master/pod.html)
-    1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.html)
-    1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.html)
-    1. [Helm 安装及简介](https://github.com/shfshanyue/learn-k8s/blob/master/helm.html)
+    1. [部署你的第一个应用](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md)
+    1. [通过外部域名访问你的应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md)
+    1. [自动为你的域名添加 https](https://github.com/shfshanyue/learn-k8s/blob/master/https.md)
+    1. [Helm 安装及简介](https://github.com/shfshanyue/learn-k8s/blob/master/helm.md)
     1. [持续集成 drone.ci 简介及部署](https://shanyue.tech/op/deploy-drone.html)
     1. [案例：前端部署发展史](https://shanyue.tech/op/deploy-fe.html)
-1. 监控
+1. 服务器及容器监控
     1. [linux 各项监控指标](https://shanyue.tech/op/linux-monitor.html)
-    1. [使用 ctop 监控容器指标]() - TODO
+    1. [使用 htop 监控服务器指标](https://shanyue.tech/op/ctop.html)
+    1. [使用 ctop 监控容器指标](https://shanyue.tech/op/ctop.html)
 1. 高频 linux 命令
     1. [sed 命令详解及示例](https://shanyue.tech/op/linux-sed.html)
     1. [awk 命令详解及示例](https://shanyue.tech/op/linux-awk.html)
@@ -60,6 +62,6 @@
 
 ## 关注我
 
-我是山月，我会定期分享全栈文章在个人公众号中。如果你对全栈面试，前端工程化，graphql，devops，个人服务器运维以及微服务感兴趣的话，可以关注我。如果想进群交流，可以添加我微信 shanyue94，备注加群。
+我是山月，我会定期分享文章在个人公众号【全栈成长之路】中。你可以添加我微信 `shanyue94` 或者在公众号中联系我
 
 ![如果你对全栈面试，前端工程化，graphql，devops，个人服务器运维以及微服务感兴趣的话，可以关注我](https://shanyue.tech/qrcode.jpg)

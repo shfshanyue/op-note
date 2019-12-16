@@ -1,7 +1,7 @@
 ---
 title: 当我有一台服务器时我做了什么
 keywords: linux,docker,next,graphql,grafana,prometheus,elk,服务器
-date: 2019-01-21T09:56:29+08:00
+date: 2019-12-16T09:56:29+08:00
 categories:
   - 运维
 tags:
@@ -10,6 +10,8 @@ tags:
 hot: 10
 
 ---
+
+
 
 + 原文地址: [当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server/)
 + 系列文章: [当我有一台服务器时我做了什么](https://shanyue.tech/op)
