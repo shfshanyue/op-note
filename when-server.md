@@ -43,14 +43,14 @@ hot: 10
 + Docker 与 Docker Compose
 + Traefik 做负载均衡(并没有)与反向代理
 
-> 这个脚手架在这里有一个活的示例 https://todos.xiange.tech/playground
+> 这个脚手架在这里有一个活的示例 <https://todos.xiange.tech/playground>
 > 你需要先使用 shanyue/shanyue 做账号密码登录，登录的 mutation 是 createUserToken
 
 那时候顺手写了一个前端的半半半半半成品脚手架，[shfshanyu/react-apollo-starter](https://github.com/shfshanyue/react-apollo-starter)，不知道现在还能不能跑得起来......
 
 技术栈 👉 Graphql + ApolloServer + Sequelize + Docker + JWT + (Traefik + Sentry + Consul)
 
-![graphql](https://raw.githubusercontent.com/shfshanyue/blog/master/post/server-todo/graphql.jpg)
+![graphql](./assets/graphql.jpg)
 
 ## Docker
 
@@ -94,7 +94,7 @@ traefik 也直接在裸机安装，docker 起的直接配置 label，代理端�
 
 [Traefik 入手及简单配置](https://github.com/shfshanyue/blog/blob/master/Articles/Traefik/Readme.md)
 
-![traefik](https://raw.githubusercontent.com/shfshanyue/blog/master/post/server-todo/traefik.jpg)
+![traefik](./assets/traefik.jpg)
 
 至于图上为什么有这么多请求，那是因为 `gitlab runner` 每秒请求一次 gitlab。
 
@@ -102,7 +102,7 @@ traefik 也直接在裸机安装，docker 起的直接配置 label，代理端�
 
 搭建了 elk。但鉴于目前访问最多的三个小伙伴分别是谷歌小蜘蛛，百度小蜘蛛以及我自己，自从搭建起来就没有使用过
 
-> 参考搭建: https://github.com/deviantony/docker-elk
+> 参考搭建: <https://github.com/deviantony/docker-elk>
 
 有可能还需要一个 file beats，但是还没弄过
 
@@ -110,7 +110,7 @@ traefik 也直接在裸机安装，docker 起的直接配置 label，代理端�
 
 一些个人代码，学习记录，以及自己一些关于山水花草的笔记需要一个地方放，搭了一个 gitlab，不过 gitlab 吃了我两个多G的内存...
 
-注意关掉 gitlab 的 prometheus 等依赖，不然会吃很多内存
+注意关掉 gitlab 的 `prometheus` 等依赖，不然会吃很多内存
 
 ## CI
 
