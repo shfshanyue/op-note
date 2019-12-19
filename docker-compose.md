@@ -61,14 +61,20 @@ services:
 # 启动
 $ docker-compose up
 
-# 查看日志
-$ docker-compose logs
+# 启动三个实例
+$ docker-compose up --scale nginx=3
+
+# 查看日志，而不退出
+$ docker-compose logs -f
 
 # 停止
 $ docker-compose stop
 
 # 删除
 $ docker-compose rm
+
+# 在某个 Service 下的容器中执行命令
+$ docker-compose exec nginx sh
 ```
 
 ## 配置文件

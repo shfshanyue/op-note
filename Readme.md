@@ -38,7 +38,7 @@
     1. [docker-compose 简易入门](https://shanyue.tech/op/docker-compose.html)
     1. [使用 traefik 做反向代理](https://shanyue.tech/op/traefik.html)
     1. [使用 traefik 自动生成 https 的证书]() - TODO
-    1. [使用 dnsmasq 搭建本地 DNS 服务]() - TODO
+    1. [使用 dnsmasq 搭建本地 DNS 服务](https://shanyue.tech/op/dnsmasq.html)
     1. [使用 openvpn 访问内部集群私有服务](https://shanyue.tech/op/openvpn.html)
     1. [使用 postgres 与 redis 做数据存储服务]() - TODO
     1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)

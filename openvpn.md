@@ -1,6 +1,6 @@
 # 使用 openvpn 与集群内部服务通信
 
-当我们访问集群内部服务，如数据库，缓存，`traefik Dashboard`，`gitlab` 时，如果直接暴露在公网中，则会造成很大安全隐患，而使用 `Basic Auth` 等也不能完全避开问题。此时在开发环境使用 `vpn` 连接集群是一个不错的选择
+当我们访问集群内部服务，如数据库，缓存，`traefik Dashboard`，`gitlab` 时，如果直接暴露在公网中，则会造成很大安全隐患，而使用 `Basic Auth` 等也不能完全避开问题。此时在开发环境使用 `Virtual Private Network` 连接集群是一个不错的选择
 
 > Q: [在集群中如何保证私有服务的安全性](https://github.com/shfshanyue/Daily-Question/issues/125)
 
