@@ -21,11 +21,12 @@
     1. [使用 alioss 托管博客](https://shanyue.tech/op/deploy-fe-with-alioss.html)
     1. [使用 github action 持续集成](https://shanyue.tech/op/github-action-guide.html)
 1. 服务器初始化配置
-    1. [服务器初始登录：ssh-config](https://shanyue.tech/op/init.html)
-    1. [服务器ssh key 以及 git 配置](https://shanyue.tech/op/ssh-setting.html)
+    1. [服务器快速登录配置：ssh-config](https://shanyue.tech/op/init.html)
+    1. [git 基本命令及安装](https://shanyue.tech/op/git.html)
+    1. [服务器ssh key 及 github 配置](https://shanyue.tech/op/ssh-setting.html)
     1. [系统信息查看相关命令](https://shanyue.tech/op/system-info.html)
     1. [vim 基本操作及配置](https://shanyue.tech/op/vim-setting.html)
-    1. [tmux 与窗口管理](https://shanyue.tech/op/tmux-vim-setting.html)
+    1. [tmux 与多窗口管理](https://shanyue.tech/op/tmux-vim-setting.html)
 1. 自动化运维
     1. [ansible 简易入门](https://shanyue.tech/op/ansible-guide.html)
     1. [ansible 必知必会](https://shanyue.tech/op/ansible-problem.html) - TODO
@@ -42,7 +43,7 @@
     1. [使用 openvpn 访问内部集群私有服务](https://shanyue.tech/op/openvpn.html)
     1. [使用 postgres 与 redis 做数据存储服务]() - TODO
     1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)
-    1. [案例：一个 Node 应用的持续集成与部署实践]()
+    1. [案例：一个 Node 应用的持续集成与部署实践]() - TODO
 1. 使用 kubernetes 编排容器
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
     1. [部署你的第一个应用: Pod ，Deployment，Service](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md)

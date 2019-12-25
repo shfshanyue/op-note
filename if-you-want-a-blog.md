@@ -18,7 +18,7 @@ tags:
 1. 配置反向代理，你需要了解 nginx 或者 traefik 的配置
 1. 配置 https，使用 lets encrypt 生成证书
 1. 使用 cron 定期更新证书
-1. 手动部署：需要每次部署都需要登录服务器
+1. 手动部署：每次部署都需要登录服务器
 1. 自动部署：结合 github/gitlab 配置 CI/CD
 1. 如果自动部署，有可能使用到 docker 与 docker-compose (有可能自建 docker repo)
 1. 如果服务器在阿里云买的有可能还需要备案
