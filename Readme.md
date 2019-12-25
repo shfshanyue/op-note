@@ -6,14 +6,12 @@
 
 > 如果对你能够有所帮助，可以帮我在 [shfshanyue/op-note](https://github.com/shfshanyue/op-note) 上点个 star。
 
-> 阿里云优惠活动，点击链接进行购买: <a href="https://www.aliyun.com/minisite/goods?userCode=4sm8juxu&share_source=copy_link">一年仅需89元即可以购买服务器~</a>。我个人服务器为2核4G配置，也更加推荐购买 <a href="https://www.aliyun.com/minisite/goods?userCode=4sm8juxu&share_source=copy_link">2核4G三年799元</a> 配置的服务器。
-
 ## 目录
 
 1. 序
     1. [导读](https://shanyue.tech/op/introduction.html)
     1. [序·当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server.html)
-    1. [序·当我有一台服务器时我做了什么(2019)]() - TODO
+    1. [序·当我有一台服务器时我做了什么(2019)](https://shanyue.tech/op/when-server-2019.html)
     1. [序·个人服务器应用开发架构推荐]() - TODO
 1. 如果你只想搭建博客
     1. [如果你只想搭一个博客](https://shanyue.tech/op/if-you-want-a-blog.html)
@@ -44,6 +42,7 @@
     1. [使用 postgres 与 redis 做数据存储服务]() - TODO
     1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)
     1. [案例：一个 Node 应用的持续集成与部署实践]() - TODO
+    1. [案例：黑客增长 - 从博客向公众号引流](https://shanyue.tech/op/blog-to-wechat.html)
 1. 使用 kubernetes 编排容器
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
     1. [部署你的第一个应用: Pod ，Deployment，Service](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md)
@@ -54,7 +53,7 @@
     1. [案例：前端部署发展史](https://shanyue.tech/op/deploy-fe.html)
 1. 服务器及容器监控
     1. [linux 各项监控指标](https://shanyue.tech/op/linux-monitor.html)
-    1. [使用 htop 监控服务器指标](https://shanyue.tech/op/ctop.html)
+    1. [使用 htop 监控进程指标](https://shanyue.tech/op/htop.html)
     1. [使用 ctop 监控容器指标](https://shanyue.tech/op/ctop.html)
 1. 高频 linux 命令
     1. [sed 命令详解及示例](https://shanyue.tech/op/linux-sed.html)

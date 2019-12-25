@@ -11,7 +11,9 @@ hot: 10
 
 ---
 
-+ 原文地址: [当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server/)
+> 记于一八年末
+
++ 原文地址: [当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server.html)
 + 系列文章: [当我有一台服务器时我做了什么](https://shanyue.tech/op)
 
 ## 前端调研

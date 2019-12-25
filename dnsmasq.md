@@ -21,6 +21,9 @@ tags:
 
 而当有了 `dnsmasq` 后，请求私有服务会先去 `dnsmasq` 解析 IP 地址。而请求互联网，如百度，则会由 `dnsmasq` 转发至上游 DNS 服务器进行解析。
 
++ 原文链接: [docker compose 简易入门](https://github.com/shfshanyue/op-note/blob/master/dnsmasq.md)
++ 系列文章: [个人服务器运维指南](https://github.com/shfshanyue/op-note)
+
 ## dnsmasq 部署
 
 `dnsmasq` 部署自然也是使用 `docker compose`，配置文件如下
@@ -79,7 +82,7 @@ nameserver 127.0.0.1
 
 在本地局域网中，可以使用该服务器的 IP 地址作为 DNS 服务器。可以使用 `openvpn` 来连接本地环境与服务器集群。详情参考 [使用 openvpn 与集群内部服务通信](https://shanyue.tech/op/openvpn.html)
 
-## DNS lookup
+## DNS lookup 测试
 
 此时使用 `host` 或 `dig` 对内部服务进行测试，均能返回正确的 IP 地址
 

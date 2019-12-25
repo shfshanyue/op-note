@@ -113,7 +113,7 @@ X-Real-Ip: 172.18.0.1
 
 此时在本地环境可以通过 `openvpn` 来连接内部集群
 
-## 下一步
+## 关于 Host
 
 此时我们访问 `whoami.docker.localhost` 仍然是通过指定 Host 的方式
 
@@ -127,4 +127,53 @@ $ curl -H Host:whoami.docker.localhost http://172.18.0.1
 
 那我们使用 IP 地址又不是很方便，这时应该怎么办？
 
-**搭建一个本地的DNS服务**，下一章将介绍如何搭建一个本地的DNS服务。
+[使用 dnsmasq 为内部集群搭建本地 DNS 服务器](https://github.com/shfshanyue/op-note/blob/master/dnsmasq.md)
+
+## 本地 DNS 设置
+
+上一章节我们已经搭建好了本地的DNS服务器，此时我们需要做的是在**连接上openVPN时自动修改/etc/resolv.conf**
+
+这里有关于 `openvpn` 配置文件的官方文档: [Openvpn How To](https://openvpn.net/community-resources/how-to/#pushing-dhcp-options-to-clients)
+
+修改服务器中的配置文件 `openvpn-data/conf/openvpn.conf`，添加一行。它会修改客户端的 DNS nameserver 地址为 `172.18.0.1`
+
+``` conf
+# 在所有客户端设置 DNS 服务器为 172.18.0.1
+push "dhcp-option DNS 172.18.0.1"
+```
+
+重启服务
+
+``` bash
+docker-compose restart
+```
+
+## 客户端 DNS 测试
+
+当客户端连接 `openvpn` 时，会自动修改 `/etc/resolv.conf` 文件，查看文件，修改成功
+
+``` conf
+search openvpn
+nameserver 172.18.0.1
+```
+
+此时可以直接 `curl` 该地址
+
+``` bash
+$ curl whoami.docker.localhost
+Hostname: fe78f4e43924
+IP: 127.0.0.1
+IP: 172.18.0.2
+RemoteAddr: 172.18.0.3:51600
+GET / HTTP/1.1
+Host: whoami.docker.localhost
+User-Agent: curl/7.54.0
+Accept: */*
+Accept-Encoding: gzip
+X-Forwarded-For: 172.18.0.1
+X-Forwarded-Host: whoami.docker.localhost
+X-Forwarded-Port: 80
+X-Forwarded-Proto: http
+X-Forwarded-Server: 9d783174aca9
+X-Real-Ip: 172.18.0.1
+```
