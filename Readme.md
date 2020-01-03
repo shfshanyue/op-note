@@ -39,7 +39,7 @@
     1. [使用 traefik 自动生成 https 的证书]() - TODO
     1. [使用 dnsmasq 搭建本地 DNS 服务](https://shanyue.tech/op/dnsmasq.html)
     1. [使用 openvpn 访问内部集群私有服务](https://shanyue.tech/op/openvpn.html)
-    1. [使用 postgres 与 redis 做数据存储服务]() - TODO
+    1. [使用 postgres 做数据存储](https://shanyue.tech/op/deploy-postgres.html)
     1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)
     1. [案例：一个 Node 应用的持续集成与部署实践]() - TODO
     1. [案例：黑客增长 - 从博客向公众号引流](https://shanyue.tech/op/blog-to-wechat.html)

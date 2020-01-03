@@ -11,7 +11,7 @@ tags:
 当我们使用 `traefik` 反向代理和自动服务发现后，我们对集群内部的服务分为两类
 
 1. 公有服务。如我的博客，网站，以及为它们提供服务的 API。我们可以通过公有的域名去映射服务使得外网能够访问，如通过我自己的域名 `shanyue.tech` 与 `xiange.tech`。
-1. 私有服务。如 `gitlab`，`traefik Dashboard`，`redis`，`postgres` 以及自己实现的不公开的私有服务。我们可以通过自建 DNS 服务器，来对这些域名进行访问。如 `*.shanyue.local` 做 `A记录` 来映射到内部集群的网关入口 (当然也要做白名单，BasicAuth，禁端口号等做安全措施)
+1. 私有服务。如 `gitlab`，`traefik Dashboard`，`redis`，`postgres` 以及自己实现的不公开的私有服务。我们可以通过自建 DNS 服务器，来对这些域名进行访问。如 `*.shanyue.local` 做 `A记录` 来映射到内部集群的网关入口 (当然也要做白名单，BasicAuth，DigestAuth，限制端口号转发等安全措施)
 
 <!--more-->
 
@@ -21,7 +21,7 @@ tags:
 
 而当有了 `dnsmasq` 后，请求私有服务会先去 `dnsmasq` 解析 IP 地址。而请求互联网，如百度，则会由 `dnsmasq` 转发至上游 DNS 服务器进行解析。
 
-+ 原文链接: [docker compose 简易入门](https://github.com/shfshanyue/op-note/blob/master/dnsmasq.md)
++ 原文链接: [搭建集群内部 DNS 服务器](https://github.com/shfshanyue/op-note/blob/master/dnsmasq.md)
 + 系列文章: [个人服务器运维指南](https://github.com/shfshanyue/op-note)
 
 ## dnsmasq 部署
