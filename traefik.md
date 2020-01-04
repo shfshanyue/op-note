@@ -202,6 +202,8 @@ Creating whoami_whoami_3 ... done
 
 ## Traefik Dashboard
 
+![traefik dashboard](./assets/traefik-dashboard.png)
+
 `traefik` 默认有一个 `dashboard`，通过 `:8080` 端口暴露出去。我们可以在浏览器中直接通过 `<IP>:8080` 访问，但是
 
 1. 使用 `IP` 地址肯定不是特别方便，此时我们可以配置 `Host`

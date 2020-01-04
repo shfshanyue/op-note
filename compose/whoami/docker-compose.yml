@@ -4,7 +4,9 @@ services:
   whoami:
     image: containous/whoami
     labels:
-      - "traefik.http.routers.whoami.rule=Host(`whoami.shanyue.tech`)"
+      - traefik.http.routers.whoami.rule=Host(`whoami.shanyue.tech`)
+      - traefik.http.routers.whoami.tls=true
+      - traefik.http.routers.whoami.tls.certresolver=le
     # environments:
     #   TMUX
     

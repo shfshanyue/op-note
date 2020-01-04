@@ -144,7 +144,7 @@
   entryPoint = "metrics"
 
 [certificatesResolvers.le.acme]
-  email = "1144542900@qq.com"
+  email = "xianger94@qq.com"
   storage = "acme.json"
 
   [certificatesResolvers.le.acme.tlsChallenge]

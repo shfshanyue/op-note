@@ -122,6 +122,8 @@ $ rsync ~/Documents/tmux.png dev:/path/Documents/blog/op/assets/dev-env.png
 
 ## traefik
 
+![traefik dashboard](./assets/traefik-dashboard.png)
+
 前后端需要做一个反向代理，选择了 traefik，更方便的服务配置以及服务发现，只需要配置容器的 `labels` 就可以部署成功
 
 另外 `traefik` 可以很方便的自动生成 ssl/tls 证书，为你提供 https 服务

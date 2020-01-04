@@ -25,8 +25,8 @@ tags:
 
 <!--more-->
 
-+ 原文地址: [前端部署演化史](https://shanyue.tech/op/deploy-fe)
-+ 系列文章: [个人服务器运维指南](https://shanyue.tech/op)
++ 原文地址: [前端部署演化史](https://shanyue.tech/op/deploy-fe.html)
++ 系列文章: [个人服务器运维指南](https://shanyue.tech/op/)
 
 > 如果本篇文章能够对你有所帮助，可以帮我在 [shfshanyue/op-note](https://github.com/shfshanyue/op-note) 上点个 star
 
