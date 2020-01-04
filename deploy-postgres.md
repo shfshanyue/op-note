@@ -8,7 +8,11 @@ date: 2019-01-04 20:37
 
 ## 部署
 
-`docker-compose.yaml` 配置文件如下，可以通过 [compose/postgres](https://github.com/shfshanyue/op-note/blob/master/compose/postgres/docker-compose.yaml) 查看我的配置
+使用官方镜像 `postgres:12-alpine` 进行数据库的部署
+
+`docker-compose.yaml` 配置文件如下
+
+> 关于配置文件，我维护在我的 github 仓库 [shfshanyue/op-note:compose](https://github.com/shfshanyue/op-note/tree/master/compose) 中
 
 ``` yaml
 version: '3'
@@ -31,7 +35,7 @@ networks:
       name: traefik_default
 ```
 
-启动服务
+`docker-compose up` 启动服务
 
 ``` bash
 $ docker-compose up -d
