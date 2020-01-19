@@ -13,11 +13,6 @@
 1. 序
     1. [序·当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server.html)
     1. [序·当我有一台服务器时我做了什么(2019)](https://shanyue.tech/op/when-server-2019.html)
-1. 如果你只想搭建博客
-    1. [如果你只想搭一个博客](https://shanyue.tech/op/if-you-want-a-blog.html)
-    1. [使用 netlify 托管博客与持续集成](https://shanyue.tech/op/deploy-fe-with-netlify.html)
-    1. [使用 alioss 托管博客](https://shanyue.tech/op/deploy-fe-with-alioss.html)
-    1. [使用 github actions 持续集成](https://shanyue.tech/op/github-action-guide.html)
 1. 服务器初始化配置
     1. [服务器快速登录配置：ssh-config](https://shanyue.tech/op/init.html)
     1. [git 基本命令及安装](https://shanyue.tech/op/git.html)
