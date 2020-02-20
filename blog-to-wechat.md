@@ -1,5 +1,7 @@
 ---
 title: '黑客增长: 如何把用户从博客引到公众号'
+path: blog-to-wechat
+description: 鉴于我自己也有一个博客，并且日均UV在200左右，决定来试一试。整理了一下思路，差不多与短信验证码的逻辑相似，于是花了一天时间搞定。
 keywords: 公众号开发,博客引流,devops,traefik,serverless
 date: 2019-12-30
 tags:

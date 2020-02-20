@@ -1,7 +1,9 @@
 ---
 title: 微信公众号开发模拟面试功能
+path: wechat-interview
+description: 最近在整理我在大厂面试以及平时工作中遇到的问题，记录在 [shfshanyue/Daily-Question](https://github.com/shfshanyue/Daily-Question) 中，但觉得对于时时回顾，常常复习仍然做的不够。
 keywords: 公众号开发,devops,traefik,serverless
-date: 2020-01-16
+date: 2020-01-16 20:00
 tags:
   - node
   - devops

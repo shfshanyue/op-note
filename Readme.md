@@ -38,6 +38,7 @@
     1. [使用 redis 做缓存服务](https://shanyue.tech/op/deploy-redis.html)
     1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)
     1. [案例：黑客增长 - 从博客向公众号引流](https://shanyue.tech/op/blog-to-wechat.html)
+    1. [案例：黑客增长 - 使用公众号开发模拟面试](https://shanyue.tech/op/wechat-interview.html)
 1. 使用 kubernetes 编排容器
     1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
     1. [部署你的第一个应用: Pod ，Deployment，Service](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md)
