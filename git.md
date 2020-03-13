@@ -23,7 +23,13 @@ $ yum install git
 
 > 如果你对 ansible 不够了解，可以参考我的文章 [ansible 入门指南](https://mp.weixin.qq.com/s/t2fpzPJk3pCK3qBgo_SdyQ)
 
-选择一个好用的 `Ansible Role` 就可以了，我们选择 [geerlingguy.git](https://github.com/geerlingguy/ansible-role-git)。指定变量，从源码安装，并安装最新版本。
+选择一个好用的 `Ansible Role` 就可以了，我们选择 [geerlingguy.git](https://github.com/geerlingguy/ansible-role-git)，使用以下命令安装 `Role`
+
+``` bash
+$ ansible-galaxy install geerlingguy.git
+```
+
+配置 playbook，指定变量，从源码安装，并安装最新版本。
 
 ``` yaml
 hosts: dev
