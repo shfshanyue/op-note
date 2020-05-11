@@ -14,6 +14,12 @@
   [entryPoints.web]
     address = ":80"
 
+    [entryPoints.web.http]
+      [entryPoints.web.http.redirections]
+        [entryPoints.web.http.redirections.entryPoint]
+          to = "websecure"
+          scheme = "https"
+
   [entryPoints.websecure]
     address = ":443"
 
@@ -76,6 +82,13 @@
   # Default: "common"
   #
   format = "json"
+
+  [accessLog.fields]
+    defaultMode = "keep"
+
+    [accessLog.fields.headers]
+      defaultMode = "keep"
+
 
 ################################################################
 # API and dashboard configuration
