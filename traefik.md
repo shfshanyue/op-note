@@ -54,7 +54,7 @@ services:
 version: '3'
 
 services:
-  # 改镜像会暴露出自身的 `header` 信息
+  # 该镜像会暴露出自身的 `header` 信息
   whoami:
     image: containous/whoami
     labels:
