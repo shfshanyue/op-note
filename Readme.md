@@ -4,11 +4,7 @@
 
 现在仔细想来，这些经验非常适用于有一台服务器却不知所措的人，于是有了本系列文章，希望能够帮助到那些服务器买来已久却仍在吃灰的人。如果你是一个自由开发者，本系列文章或许对你环境搭建也会有些许启发。
 
-如果你的服务器配置高于1核2G，则本系列文章将会适用于你。如果你的服务器配置较高，并且拥有多台，你可以参考我另一系列文章 [k8s 与微服务实践](https://github.com/shfshanyue/learn-k8s)
-
-你可以在阿里云新购一台服务器作为实践：
-
-+ **[阿里云新人优惠服务器](https://www.aliyun.com/minisite/goods?userCode=4sm8juxu)**
+如果你的服务器配置高于1核2G，则本系列文章将会适用于你。如果你的服务器配置较高，并且拥有多台服务器，你可以参考我另一系列文章 [k8s 与微服务实践](https://github.com/shfshanyue/learn-k8s)
 
 > 本系列文章托管在 github 的仓库 [shfshanyue/op-note](https://github.com/shfshanyue/op-note)
 
@@ -26,7 +22,6 @@
     1. [tmux 与多窗口管理](https://shanyue.tech/op/tmux-vim-setting.html)
 1. 自动化运维
     1. [ansible 简易入门](https://shanyue.tech/op/ansible-guide.html)
-    1. [ansible 必知必会](https://shanyue.tech/op/ansible-problem.html) - TODO
 1. 了解 docker 
     1. [docker 简易入门](https://shanyue.tech/op/docker.html)
     1. [Dockerfile 最佳实践](https://shanyue.tech/op/dockerfile-practice.html)
@@ -43,14 +38,6 @@
     1. [使用 sentry 做异常监控](https://shanyue.tech/op/deploy-sentry.html)
     1. [案例：黑客增长 - 从博客向公众号引流](https://shanyue.tech/op/blog-to-wechat.html)
     1. [案例：黑客增长 - 使用公众号开发模拟面试](https://shanyue.tech/op/wechat-interview.html)
-1. 使用 kubernetes 编排容器
-    1. [搭建一个 k8s 集群](https://github.com/shfshanyue/learn-k8s)
-    1. [部署你的第一个应用: Pod ，Deployment，Service](https://github.com/shfshanyue/learn-k8s/blob/master/pod.md)
-    1. [部署你的第一个应用: Ingress](https://github.com/shfshanyue/learn-k8s/blob/master/ingress.md)
-    1. [部署你的第一个应用: https](https://github.com/shfshanyue/learn-k8s/blob/master/https.md)
-    1. [使用 Helm 作为包管理器](https://github.com/shfshanyue/learn-k8s/blob/master/helm.md)
-    1. [持续集成 drone.ci 简介及部署](https://shanyue.tech/op/deploy-drone.html)
-    1. [案例：前端部署发展史](https://shanyue.tech/op/deploy-fe.html)
 1. 服务器及容器监控
     1. [linux 各项监控指标](https://shanyue.tech/op/linux-monitor.html)
     1. [使用 htop 监控进程指标](https://shanyue.tech/op/htop.html)
@@ -66,6 +53,7 @@
 
 ## 关注我
 
-我是山月，我会定期分享文章在个人公众号【全栈成长之路】中。你可以添加我微信 `shanyue94` 或者在公众号中联系我，添加好友时回复**个人服务器**可以拉你进个人服务器运维交流群。
+我是山月，我会定期分享文章在个人公众号【全栈成长之路】中。你可以添加我微信 `shanyue94` 或者在公众号中联系我，添加好友时回复 **个人服务器** 可以拉你进个人服务器运维交流群。
 
-![如果你对全栈面试，前端工程化，graphql，devops，个人服务器运维以及微服务感兴趣的话，可以关注我](https://shanyue.tech/qrcode.jpg)
+如果你没有服务器，可以在华为云新购一台服务器作为实践，目前 [4核16G 服务器三年不到 2000](https://activity.huaweicloud.com/ecs_promotion.html?bpName=5f9f98a29e2c40b780c1793086f29fe2&bindType=1&salesID=WX103278)
+
