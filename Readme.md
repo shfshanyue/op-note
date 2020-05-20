@@ -6,6 +6,8 @@
 
 如果你的服务器配置高于1核2G，则本系列文章将会适用于你。如果你的服务器配置较高，并且拥有多台服务器，你可以参考我另一系列文章 [k8s 与微服务实践](https://github.com/shfshanyue/learn-k8s)
 
+如果你没有服务器，可以在华为云新购一台服务器作为实践，目前 [4核16G 服务器三年不到 2000](https://activity.huaweicloud.com/ecs_promotion.html?bpName=5f9f98a29e2c40b780c1793086f29fe2&bindType=1&salesID=WX103278)
+
 > 本系列文章托管在 github 的仓库 [shfshanyue/op-note](https://github.com/shfshanyue/op-note)
 
 ## 目录
@@ -14,9 +16,9 @@
     1. [序·当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server.html)
     1. [序·当我有一台服务器时我做了什么(2019)](https://shanyue.tech/op/when-server-2019.html)
 1. 服务器初始化配置
-    1. [高效简单的服务器登录配置](https://shanyue.tech/op/init.html)
-    1. [git 基本命令及安装](https://shanyue.tech/op/git.html)
-    1. [服务器ssh key 及 github 配置](https://shanyue.tech/op/ssh-setting.html)
+    1. [高效简单的服务器登录配置](./init)
+    1. [服务器上 git 安装及基本配置](./git)
+    1. [服务器上 ssh key 及 github 配置](https://shanyue.tech/op/ssh-setting.html)
     1. [系统信息查看相关命令](https://shanyue.tech/op/system-info.html)
     1. [vim 基本操作及配置](https://shanyue.tech/op/vim-setting.html)
     1. [tmux 与多窗口管理](https://shanyue.tech/op/tmux-vim-setting.html)
@@ -55,5 +57,4 @@
 
 我是山月，我会定期分享文章在个人公众号【全栈成长之路】中。你可以添加我微信 `shanyue94` 或者在公众号中联系我，添加好友时回复 **个人服务器** 可以拉你进个人服务器运维交流群。
 
-如果你没有服务器，可以在华为云新购一台服务器作为实践，目前 [4核16G 服务器三年不到 2000](https://activity.huaweicloud.com/ecs_promotion.html?bpName=5f9f98a29e2c40b780c1793086f29fe2&bindType=1&salesID=WX103278)
 

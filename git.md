@@ -1,6 +1,8 @@
-# git 安装及基本配置
+# 服务器上 git 安装及基本配置
 
-`git` 基本上来说是开发者必备工具了，在服务器里没有 `git` 实在不太能说得过去。何况，没有 `git` 的话，**面向github编程** 从何说起，如同一个程序员断了左膀右臂。
+`git` 对于开发者来说属于必备工具中的必备工具了。何况，没有 `git` 的话，**面向github编程** 从何说起，如同一个程序员断了左膀右臂。
+
+本篇文章将介绍如何在服务器(centos)上安装最新版本的 git 及其基本配置
 
 > 你对流程熟悉后，只需要一分钟便可以操作完成
 
@@ -15,9 +17,33 @@
 $ yum install git
 ```
 
-如果使用 `yum` 来安装 `git` 的话，那实在没有必要单开一篇文章了。那使用 `yum` 的弊端在哪里？我们知道，`yum` 为了保证它的仓库的稳定性，往往软件的版本都会很老。
+如果使用 `yum` 来安装 `git` 的话，那实在没有必要单开一篇文章了，但好事多磨。那使用 `yum` 的弊端在哪里？我们知道，`yum` 为了保证它的软件的稳定性，往往软件的版本都会很老，以至于非常不好用。
 
-**而用 `yum` 安装的 `git` 没有语法高亮！**
+**而且最重要的是 `yum` 安装的 `git` 没有语法高亮！**
+
+## 安装最新版本
+
+``` bash
+$ curl -sSL https://www.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz
+
+$ make all
+
+$ make install
+```
+
+### 安装成功
+
+`git version`，查看版本号，此时为 `2.16.2`
+
+``` bash
+$ git version
+git version 2.16.2
+```
+
+再用它 `git status`，查看下语法高亮效果
+
+![git 高亮效果](./assets/git.jpg)
+
 
 ## 使用 ansible 安装
 
@@ -48,20 +74,7 @@ hosts: dev
 $ ansible-playbook -i hosts git.yaml
 ```
 
-## 安装成功
-
-`git version`，查看版本号，此时为 `2.16.2`
-
-``` bash
-$ git version
-git version 2.16.2
-```
-
-再用它 `git status`，查看下语法高亮效果
-
-![git 高亮效果](./assets/git.jpg)
-
-## 配置
+## 基本配置
 
 全局配置邮箱及用户名，此时就可以愉快地在服务器中使用 `git` 管理代码了
 

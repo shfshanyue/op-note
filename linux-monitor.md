@@ -146,6 +146,12 @@ Mem:           3.7G        682M        398M        2.1M        2.6G        2.7G
 Swap:            0B          0B          0B
 ```
 
+## 页大小
+
+``` bash
+$ getconf -a | grep page
+```
+
 ## 进程
 
 衍生问题
