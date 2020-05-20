@@ -8,6 +8,16 @@
 
 > 本系列文章托管在 github 的仓库 [shfshanyue/op-note](https://github.com/shfshanyue/op-note)
 
+## 预览
+
+### 窗口管理
+
+![窗口管理](./assets/dev-env.png)
+
+### 服务管理
+
+![服务管理](https://raw.githubusercontent.com/shfshanyue/graph/master/draw/docker-compose.jpg)
+
 ## 目录
 
 1. 序
