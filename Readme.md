@@ -14,7 +14,7 @@
     1. [序·当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server.html)
     1. [序·当我有一台服务器时我做了什么(2019)](https://shanyue.tech/op/when-server-2019.html)
 1. 服务器初始化配置
-    1. [服务器快速登录配置：ssh-config](https://shanyue.tech/op/init.html)
+    1. [高效简单的服务器登录配置](https://shanyue.tech/op/init.html)
     1. [git 基本命令及安装](https://shanyue.tech/op/git.html)
     1. [服务器ssh key 及 github 配置](https://shanyue.tech/op/ssh-setting.html)
     1. [系统信息查看相关命令](https://shanyue.tech/op/system-info.html)
