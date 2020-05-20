@@ -6,8 +6,6 @@
 
 如果你的服务器配置高于1核2G，则本系列文章将会适用于你。如果你的服务器配置较高，并且拥有多台服务器，你可以参考我另一系列文章 [k8s 与微服务实践](https://github.com/shfshanyue/learn-k8s)
 
-如果你没有服务器，可以在华为云新购一台服务器作为实践，目前 [4核16G 服务器三年不到 2000](https://activity.huaweicloud.com/ecs_promotion.html?bpName=5f9f98a29e2c40b780c1793086f29fe2&bindType=1&salesID=WX103278)
-
 > 本系列文章托管在 github 的仓库 [shfshanyue/op-note](https://github.com/shfshanyue/op-note)
 
 ## 目录
@@ -57,4 +55,9 @@
 
 我是山月，我会定期分享文章在个人公众号【全栈成长之路】中。你可以添加我微信 `shanyue94` 或者在公众号中联系我，添加好友时回复 **个人服务器** 可以拉你进个人服务器运维交流群。
 
+如果你没有服务器，可以在华为云或者阿里云新购一台服务器作为实践，对于新手有以下优惠
 
++ [华为云：4核16G服务器三年不到 2000](https://activity.huaweicloud.com/ecs_promotion.html?bpName=5f9f98a29e2c40b780c1793086f29fe2&bindType=1&salesID=WX103278)
++ [阿里云](https://www.aliyun.com/minisite/goods?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link)
+
+![](https://shanyue.tech/wechat.jpeg)

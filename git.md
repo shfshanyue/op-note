@@ -1,4 +1,4 @@
-# 服务器上 git 安装及基本配置
+# 服务器上 git 的安装及基本配置
 
 `git` 对于开发者来说属于必备工具中的必备工具了。何况，没有 `git` 的话，**面向github编程** 从何说起，如同一个程序员断了左膀右臂。
 
@@ -23,6 +23,10 @@ $ yum install git
 
 ## 安装最新版本
 
+安装最新版本，或者说稳定版本，可以充分体验新版本带来的特性，从而使自己更舒服一些。从源码安装 `git` 是最无拘无束最灵活的安装方法，但同时也是最繁琐的方法。
+
+[https://github.com/git/git](https://github.com/git/git)
+
 ``` bash
 $ curl -sSL https://www.kernel.org/pub/software/scm/git/git-2.26.2.tar.gz
 
@@ -33,11 +37,11 @@ $ make install
 
 ### 安装成功
 
-`git version`，查看版本号，此时为 `2.16.2`
+`git version`，查看版本号，此时为 `2.26.2`
 
 ``` bash
 $ git version
-git version 2.16.2
+git version 2.26.2
 ```
 
 再用它 `git status`，查看下语法高亮效果
