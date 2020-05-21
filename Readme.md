@@ -20,16 +20,18 @@
 
 ## 目录
 
+> 本系列文章所有容器的配置文件在 [compose目录](https://github.com/shfshanyue/op-note/tree/master/compose)
+
 1. 序
     1. [序·当我有一台服务器时我做了什么](https://shanyue.tech/op/when-server.html)
     1. [序·当我有一台服务器时我做了什么(2019)](https://shanyue.tech/op/when-server-2019.html)
 1. 服务器初始化配置
-    1. [高效简单的服务器登录配置](./init)
-    1. [服务器上 git 安装及基本配置](./git)
-    1. [服务器上 ssh key 及 github 配置](https://shanyue.tech/op/ssh-setting.html)
-    1. [系统信息查看相关命令](https://shanyue.tech/op/system-info.html)
+    1. [高效简单的服务器登录配置](./init.md)
+    1. [服务器上 git 安装及基本配置](./git.md)
+    1. [服务器上 ssh key 及 github 配置](./ssh-setting.md)
+    1. [系统信息查看相关命令](./system-info.md)
     1. [vim 基本操作及配置](https://shanyue.tech/op/vim-setting.html)
-    1. [tmux 与多窗口管理](https://shanyue.tech/op/tmux-vim-setting.html)
+    1. [tmux 与多窗口管理](https://shanyue.tech/op/tmux-setting.html)
 1. 自动化运维
     1. [ansible 简易入门](https://shanyue.tech/op/ansible-guide.html)
 1. 了解 docker 
