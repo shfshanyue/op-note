@@ -14,9 +14,11 @@ tags:
 
 # ansible 简易入门
 
-使用 ansible 可以进行批量配置，批量安装软件，省了一大部分繁琐的重复工作，提高了管理服务器的效率。
+使用 ansible 可以进行批量配置服务器，批量安装软件，省了一大部分繁琐的重复工作，提高了管理服务器的效率。
 
-本章介绍如何使用 `ansible` 的安装以及关于 `ansible` 的基本功能。建议拥有云服务器的同学都可以学习一下 `ansible`
+简单点说，使用 ansible 可以一键配置好你所有服务器的一切配置及软件安装，如 `vim`，`git`, `tmux`，`python`，`c++`，`nginx`，`docker` 等。如果你对它情有所钟，你还可以使用它自动部署应用至多台服务器。(目前建议通过 k8s 及 CI 做自动部署)
+
+本章介绍如何使用 `ansible` 的安装以及关于 `ansible` 的基本功能，建议拥有云服务器的同学都可以尝试一下 `ansible`，你会发现宝藏的。
 
 <!--more-->
 
@@ -116,7 +118,7 @@ shanyue | SUCCESS => {
 }
 ```
 
-## ansible playbook
+## Ansible playbook
 
 `ansible ad-hoc` 执行的命令过于简单，一般用于服务器的测试工作以及一些简单的小操作。而一些复杂的事情，如上述所说的 `tmux` 的安装则需要一系列脚本来完成。
 
@@ -131,7 +133,9 @@ shanyue | SUCCESS => {
     - tmux
 ```
 
-### role
++ [Ansible playbook 最佳实践](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html)
+
+### Role
 
 role 指定了一系列命令，或者称做 `tasks`。每个 `task` 都可以看做一个 `ad-hoc`，由 [ansible module](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html) 组成
 
@@ -218,7 +222,7 @@ roles/
     state: absent
 ```
 
-## ansible-galaxy
+## Ansible galaxy
 
 即 `Role` 的仓库。
 
@@ -239,6 +243,12 @@ Found 387 roles matching your search:
  aalaesar.install_nextcloud                              Add a new Nextcloud instance in your infrastructure. The rol
  ...
 $ ansible-galaxy install davidwittman.redis
+```
+
+### 列出本地安装的所有 Role
+
+``` bash
+$ ansible-galaxy list
 ```
 
 ## 小结

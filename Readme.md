@@ -28,7 +28,7 @@
 1. 服务器初始化配置
     1. [高效简单的服务器登录配置](./init.md)
     1. [服务器上 git 安装及基本配置](./git.md)
-    1. [服务器上 ssh key 及 github 配置](./ssh-setting.md)
+    1. [服务器上 ssh key 管理及 github 配置](./ssh-setting.md)
     1. [系统信息查看相关命令](./system-info.md)
     1. [vim 基本操作及配置](https://shanyue.tech/op/vim-setting.html)
     1. [tmux 与多窗口管理](https://shanyue.tech/op/tmux-setting.html)
