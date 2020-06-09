@@ -1,5 +1,5 @@
 ---
-title: 云服务中 ssh key 与 github 的配置
+title: 云服务器中 ssh key 管理 与 github 的配置
 date: 2019-10-11 23:00
 keywords: ssh-keygen,permission denied (publickey),git clone 的配置,ssh -T
 description: ssh keygen 生成非对称加密中的 public-key 与 private-key，并把 publick-key 扔到 github 上。与上篇文章配置服务器免登陆一样的步骤。
@@ -8,7 +8,7 @@ tags:
 
 ---
 
-# 云服务器中 ssh key 与 github 配置
+# 云服务器中 ssh key 管理与 github 配置
 
 程序员经常挂在嘴边的一句话是: 面向 github 编程。如果没有 github 对程序员而言万古如长夜，github 对程序员的重要性可见一斑。
 

@@ -43,8 +43,8 @@ tags:
 
 <!--more-->
 
-+ 原文地址: [窗口复用与 tmux](https://shanyue.tech/op/tmux-setting) [github](https://github.com/shfshanyue/op-note/blob/master/tmux-setting.md)
-+ 系列文章: [服务器运维笔记](https://shanyue.tech/op)
++ 原文地址: [窗口复用与 tmux](https://shanyue.tech/op/tmux-setting.html)
++ 系列文章: [服务器运维笔记](https://shanyue.tech/op/)
 
 ## 安装
 

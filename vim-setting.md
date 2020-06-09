@@ -27,7 +27,7 @@ tags:
 
 <!--more-->
 
-+ 原文地址: [使用 vim 及其配置](https://shanyue.tech/op/vim-setting)
++ 原文地址: [使用 vim 及其配置](https://shanyue.tech/op/vim-setting.html)
 + 系列文章: [我的服务器运维笔记](https://shanyue.tech/op/)
 
 ## 高频操作
