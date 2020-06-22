@@ -15,11 +15,11 @@ tags:
 
 + 无须重启即可更新配置
 + 自动的服务发现与负载均衡
-+ 与 `docker` 的完美集成，基于 `container label` 的配置
++ 与 `docker` 完美集成，基于 `container label` 的配置
 + 漂亮的 `dashboard` 界面
-+ `metrics` 的支持，对 `prometheus` 和 `k8s` 的集成
++ `metrics` 的支持，支持对 `prometheus` 和 `k8s` 集成
 
-接下来讲一下它的安装，基本功能以及配置。`traefik` 在 `v1` 与 `v2` 版本间差异过大，本篇文章采用了 `v2`
+接下来讲一下 `traefik` 的安装，基本功能以及配置，以及如何基于 `Traefik` 搭建一套 `CaaS` 的架构。
 
 <!--more-->
 
@@ -30,14 +30,16 @@ tags:
 
 ## 快速开始
 
-我们使用 `traefik:v2.0` 作为镜像启动 `traefik` 服务。`docker-compose.yaml` 配置文件如下
+> 本篇文章基于版本号 `traefik:v2.2` 进行讲解
+
+我们使用 `traefik:v2.2` 作为镜像启动 `traefik` 服务。`docker-compose.yaml` 配置文件如下
 
 ``` yaml
 version: '3'
 
 services:
   traefik:
-    image: traefik:v2.0
+    image: traefik:v2.2
     command: --api.insecure=true --providers.docker
     ports:
       - "80:80"
@@ -46,9 +48,9 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 ```
 
-此时我们使用命令 `docker-compose up -d` 开启 `traefik` 服务
+此时我们使用命令 `docker-compose up -d` 开启 `traefik` 服务，此时一个反向代理器已经部署成功。
 
-接下来我们使用 `docker-compose` 启动一个简单的 `http` 服务，`docker-compose.yaml` 配置文件如下
+接下来我们使用 `docker-compose` 借助 `whoami` 镜像启动一个简单的 `http` 服务，`docker-compose.yaml` 配置文件如下
 
 ``` yaml
 version: '3'
@@ -100,25 +102,23 @@ X-Real-Ip: 127.0.0.1
 
 ![](https://docs.traefik.io/assets/img/static-dynamic-configuration.png)
 
-`traefik` 一般需要一个配置文件来管理路由，服务，证书等。我们可以通过 `docker` 启动 `traefik` 时来挂载配置文件，`docker-compose.yaml` 文件如下
+`traefik` 一般需要一个配置文件来管理路由，服务，证书等。我们可以通过 `docker` 启动 `traefik` 时来挂载配置文件，`docker-compose.yaml` 初始文件如下
 
 ``` yaml
 version: '3'
 
 services:
   traefik:
-    image: traefik:v2.0
+    image: traefik:v2.2
     ports:
       - "80:80"
       - "8080:8080"
     volumes:
       - ./traefik.toml:/etc/traefik/traefik.toml
       - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      - "traefik.http.routers.api.rule=Host(`traefik..com`)"
 ```
 
-基本配置文件可以通过 [traefik.sample.toml](https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml) 获取
+其中 `traefik.toml` 通过挂载文件的方式作为 `traefik` 的基本配置文件，基本配置文件可以通过 [traefik.sample.toml](https://raw.githubusercontent.com/containous/traefik/master/traefik.sample.toml) 获取
 
 一个简单的配置文件及释义如下
 
@@ -134,6 +134,17 @@ services:
 
 ### 日志
 
+日志极为重要，当某个路由配置不成功，或者 https 配置失败时，可以通过日志文件找到蛛丝马迹。
+
+``` toml
+# Writing Logs to a File, in JSON
+[log]
+  filePath = "/path/to/log-file.log"
+  format = "json"
+```
+
+### 请求日志
+
 ``` toml
 [accessLog]
 
@@ -142,7 +153,7 @@ filePath = "./traefik-access.json"
 format = "json"
 ```
 
-日志文件配置为 `json` 格式，结构化数据方便调试
+请求日志文件配置为 `json` 格式，结构化数据方便调试
 
 ### entryPoint
 
@@ -207,7 +218,7 @@ Creating whoami_whoami_3 ... done
 `traefik` 默认有一个 `dashboard`，通过 `:8080` 端口暴露出去。我们可以在浏览器中直接通过 `<IP>:8080` 访问，但是
 
 1. 使用 `IP` 地址肯定不是特别方便，此时我们可以配置 `Host`
-1. 在公网环境下访问有安全性问题，此时可以配置 `basicAuth`，`digestAuth`，`IpWhiteList` 或者 `openVPN`
+1. 在公网环境下访问有安全性问题，此时可以配置 `basicAuth`，`digestAuth`，`IpWhiteList` 或者 `openVPN` 等中间件
 
 再次更改 `traefik` 的 `docker-compose.yaml` 文件如下：
 
@@ -216,7 +227,7 @@ version: '3'
 
 services:
   reverse-proxy:
-    image: traefik:v2.0
+    image: traefik:v2.2
     restart: always
     ports:
       - "80:80"
@@ -243,7 +254,7 @@ version: '3'
 
 services:
   reverse-proxy:
-    image: traefik:v2.0
+    image: traefik:v2.2
     restart: always
     ports:
       - "80:80"
