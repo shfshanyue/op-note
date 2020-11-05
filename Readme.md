@@ -8,6 +8,10 @@
 
 > 本系列文章托管在 github 的仓库 [shfshanyue/op-note](https://github.com/shfshanyue/op-note)
 
+如果你没有服务器，可以在华为云或者阿里云新购一台服务器作为实践，对于新手有以下优惠
+
++ [阿里云](https://www.aliyun.com/1111/pintuan-share?ptCode=MTY5MzQ0Mjc1MzQyODAwMHx8MTE0fDE%3D&userCode=4sm8juxu)
+
 ## 预览
 
 ### 窗口管理
@@ -73,6 +77,6 @@
 
 如果你没有服务器，可以在华为云或者阿里云新购一台服务器作为实践，对于新手有以下优惠
 
-+ [阿里云](https://www.aliyun.com/minisite/goods?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link)
++ [阿里云](https://www.aliyun.com/1111/pintuan-share?ptCode=MTY5MzQ0Mjc1MzQyODAwMHx8MTE0fDE%3D&userCode=4sm8juxu)
 
 ![](https://shanyue.tech/wechat.jpeg)
