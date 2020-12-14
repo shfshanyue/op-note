@@ -8,6 +8,10 @@
 
 > 本系列文章托管在 github 的仓库 [shfshanyue/op-note](https://github.com/shfshanyue/op-note)
 
+如果你没有服务器，可以在华为云或者阿里云新购一台服务器作为实践，对于新手有以下优惠
+
++ [阿里云](https://www.aliyun.com/1111/pintuan-share?ptCode=MTY5MzQ0Mjc1MzQyODAwMHx8MTE0fDE%3D&userCode=4sm8juxu)
+
 ## 预览
 
 ### 窗口管理
@@ -63,13 +67,16 @@
     1. [htop 命令详解及示例](https://shanyue.tech/op/htop.html) - TODO
     1. [案例: 使用jq与sed制作掘金面试文章榜单](https://shanyue.tech/op/jq-sed-case.html)
 
+### TODO
+
+1. 为何需要一套 Linux 环境
+
 ## 关注我
 
 我是山月，我会定期分享文章在个人公众号【全栈成长之路】中。你可以添加我微信 `shanyue94` 或者在公众号中联系我，添加好友时回复 **个人服务器** 可以拉你进个人服务器运维交流群。
 
 如果你没有服务器，可以在华为云或者阿里云新购一台服务器作为实践，对于新手有以下优惠
 
-+ [华为云：4核16G服务器三年不到 2000](https://activity.huaweicloud.com/ecs_promotion.html?bpName=5f9f98a29e2c40b780c1793086f29fe2&bindType=1&salesID=WX103278)
-+ [阿里云](https://www.aliyun.com/minisite/goods?ptCode=FDDDB2D258660CD9C81A96E25077465B647C88CF896EF535&userCode=4sm8juxu&share_source=copy_link)
++ [阿里云](https://www.aliyun.com/1111/pintuan-share?ptCode=MTY5MzQ0Mjc1MzQyODAwMHx8MTE0fDE%3D&userCode=4sm8juxu)
 
 ![](https://shanyue.tech/wechat.jpeg)
