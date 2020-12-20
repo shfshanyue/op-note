@@ -162,3 +162,5 @@
 
   [certificatesResolvers.le.acme.tlsChallenge]
 
+  [certificatesResolvers.le.acme.httpChallenge]
+    entryPoint = "web"
