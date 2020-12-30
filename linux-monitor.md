@@ -21,16 +21,16 @@ tags:
 
 先以一张来自 [linuxperf](http://www.brendangregg.com/linuxperf.html) 的图作为大纲，我试着对一些指标进行整理，以备不时之需。
 
-![linux performance tools](http://www.brendangregg.com/Perf/linux_perf_tools_full.png)
+![linux performance tools](./assets/linux_perf_tools_full.png)
 
 <!--more-->
 
-+ 原文地址: [linux 各项指标监控小记](https://shanyue.tech/op/linux-monitor) · [github](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md)
-+ 系列文章: [服务器运维笔记](https://shanyue.tech/op) · [github](https://github.com/shfshanyue/op-note)
++ 原文地址: [linux 各项指标监控小记](https://shanyue.tech/op/linux-monitor.html) · [github](https://github.com/shfshanyue/op-note/blob/master/linux-monitor.md)
++ 系列文章: [服务器运维笔记](https://shanyue.tech/op/) · [github](https://github.com/shfshanyue/op-note)
 
 ## htop/top
 
-![htop](https://raw.githubusercontent.com/shfshanyue/op-note/master/assets/htop.png)
+![htop](./assets/htop.png)
 
 htop 足以覆盖大多数指标，详细直接查看帮助即可。
 
