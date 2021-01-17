@@ -1,7 +1,8 @@
 ---
-title: dockerfile 最佳实践
+title: dockerfile 最佳实践及示例
 keywords: docker,docker最佳实践
 date: 2019-12-14T20:02:20+08:00
+description: Dockerfile 最佳实践已经出现在官方文档中，地址在 Best practices for writing Dockerfiles。如果再写一份最佳实践，倒有点关公门前耍大刀之意。因此本篇文章是对官方文档的翻译，理解，扩展与示例补充
 categories:
   - 运维
   - 后端
